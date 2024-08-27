@@ -43,18 +43,37 @@ prompt1=[
 ]
 prompt = [
     """
-    You are an expert in converting English questions to Python Pandas code!
-    The dataset is stored in a CSV file named 'students.csv' and has the following columns:
-    first_name, last_name, date_of_birth, email, enrollment_date.
-    
-    For example,
-    Example 1 - How many records are present in the dataset?
-    The Pandas code will be something like this: df.shape[0]
-    
-    Example 2 - Show all the students born on 2000-01-15?
-    The Pandas code will be something like this: df[df['date_of_birth'] == '2000-01-15']
-    
-    The code should be a valid Python Pandas code snippet and should not include unnecessary text.
+    Context:
+Assume the role of an expert data analyst. Our product generates Python code using Pandas based on "text prompts" input by users. These prompts often involve requests for data filtering, aggregation, or other data manipulation tasks using a dataset stored in a CSV file.
+
+Your task is to convert these natural language prompts into accurate and efficient Python Pandas code. The dataset for each task will be provided, and you must ensure that the generated code correctly reflects the user's intent.
+
+Instructions for Analysis:
+- Convert the natural language prompt into valid Python Pandas code.
+- The code should be concise, correct, and directly executable on the provided dataset.
+- Avoid including unnecessary text or comments in the output code.
+- Enclose each conditions with (), especially with multiple conditions.
+
+For example:
+- Prompt: "John Doe's birthday"
+  Output: df[(df['first_name'] == 'John') & (df['last_name'] == 'Doe')]['date_of_birth']
+
+- Prompt: "Show all the students born on 2000-01-15?"
+  Output: df[df['date_of_birth'] == '2000-01-15']
+
+Ensure the code handles the dataset's structure correctly, and only provide the Pandas code snippet needed to fulfill the user's request.
+
+Remember, the generated code should be a valid Python Pandas code snippet and should not include any extra explanations or comments.
+
+Metadata: csv has the following columns - 
+    first_name, last_name, date_of_birth, email, enrollment_date
+    df.dtypes
+    student_id                  int64
+    first_name                 object
+    last_name                  object
+    date_of_birth      datetime64[ns]
+    email                      object
+    enrollment_date    datetime64[ns]
     """
 ]
 # #Streamlit page
@@ -79,14 +98,21 @@ prompt = [
 
 def get_gemini_response_sql(question, prompt):
     model = genai.GenerativeModel('gemini-pro')
-    response = model.generate_content([prompt[0], question])
+    generation_config = genai.GenerationConfig(stop_sequences = None,
+  temperature=0.6,
+  top_p=1.0,
+  top_k=32,
+  candidate_count=1,)
+    response = model.generate_content([prompt[0], question], generation_config=generation_config)
     return response.text
 
 import pandas as pd
-
+import matplotlib as plt
 # Function to execute the generated Pandas code
 def execute_pandas_code(code, csv_file):
     df = pd.read_csv(csv_file)
+    df['date_of_birth'] = pd.to_datetime(df['date_of_birth'])
+    df['enrollment_date'] = pd.to_datetime(df['enrollment_date'])
     print(df)
     # Execute the generated code within the context of the local variables
     result = eval(code, {'df': df})
@@ -107,3 +133,19 @@ if submit:
     data = execute_pandas_code(response, "students.csv")
     st.subheader("The response is:")
     st.write(data)
+if submit:
+    response = get_gemini_response_sql(question, prompt)
+    st.write(f"Generated Code:\n{response}")
+    
+    # Execute the generated code and store the result
+    result = execute_pandas_code(response, "students.csv")
+    
+    # Render the result based on its type
+    if isinstance(result, pd.DataFrame):
+        st.subheader("The response is:")
+        st.write(result)
+    elif isinstance(result, plt.Figure):
+        st.subheader("The response is:")
+        st.pyplot(result)
+    else:
+        st.write("Unknown response type")

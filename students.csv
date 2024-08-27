@@ -1,0 +1,11 @@
+student_id,first_name,last_name,date_of_birth,email,enrollment_date
+1,John,Doe,2000-01-15,john.doe@example.com,2024-08-26
+2,Jane,Smith,1999-05-22,jane.smith@example.com,2024-08-26
+3,Alice,Johnson,2001-07-30,alice.johnson@example.com,2024-08-26
+4,Bob,Brown,2000-11-05,bob.brown@example.com,2024-08-26
+5,Charlie,Davis,2002-02-14,charlie.davis@example.com,2024-08-26
+6,Diana,Wilson,1998-09-09,diana.wilson@example.com,2024-08-26
+7,Eve,Taylor,2001-12-25,eve.taylor@example.com,2024-08-26
+8,Frank,Anderson,1999-03-19,frank.anderson@example.com,2024-08-26
+9,Grace,Thomas,2000-08-08,grace.thomas@example.com,2024-08-26
+10,Hank,Martinez,2002-04-23,hank.martinez@example.com,2024-08-26

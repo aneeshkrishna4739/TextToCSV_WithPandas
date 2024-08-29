@@ -111,11 +111,14 @@ import pandas as pd
 import matplotlib.pyplot as plt
 from matplotlib.figure import Figure
 # Function to execute the generated Pandas code
+
+
+
 def execute_pandas_code(code, csv_file):
     # Load and preprocess the DataFrame
-    df = pd.read_csv(csv_file)
-    df['date_of_birth'] = pd.to_datetime(df['date_of_birth'])
-    df['enrollment_date'] = pd.to_datetime(df['enrollment_date'])
+    # df = pd.read_csv(csv_file)
+    # df['date_of_birth'] = pd.to_datetime(df['date_of_birth'])
+    # df['enrollment_date'] = pd.to_datetime(df['enrollment_date'])
     
     # Local variables for exec
     local_vars = {'df': df, 'plt': plt}
@@ -138,8 +141,19 @@ def execute_pandas_code(code, csv_file):
         return None
 
 # Streamlit page
+print("data loaded")
 st.set_page_config(page_title="I can retrieve data using Pandas")
+
+@st.cache_data
+def load_data():
+    # This function will be called only once
+    df=pd.read_csv("students.csv")
+    df['date_of_birth'] = pd.to_datetime(df['date_of_birth'])
+    df['enrollment_date'] = pd.to_datetime(df['enrollment_date'])
+    return df
 st.header("Gemini App to Retrieve CSV Data")
+
+df = load_data()
 
 question = st.text_input("Input:", key="input")
 submit = st.button("Ask the question")

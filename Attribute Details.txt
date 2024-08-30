@@ -1,0 +1,31 @@
+p_match:		match id
+inns:			inning number
+bat:			batsman name	
+p_bat:			player id of the batsman on strike
+team_bat:		batting team
+bowl:			bowler name
+p_bowl:			player id of current bowler
+team_bowl:		bowling team
+ball:			ball number of the current over
+score:			no of runs scored in current ball
+out:			boolean value for dismissal in current delivery
+over:			current over number
+noball:			runs scored off no ball
+wide:			runs scored off wide
+max_balls:		maximum balls allowed in the current innings
+date:			current date when match is held
+year:			current year when match is held
+ground:			venue ground
+country:		venue country
+winner:			match winning team
+toss:			toss winning team
+competition:	name of the competition
+bat_hand:		batting style of current batsman(right/left)	
+bowl_style:		bowling style of current bowler
+bowl_kind:		bowling specialty of current bowler
+batruns:		runs scored by the batter in current ball
+ballfaced:		legal balls bowled by the bowler in current ball(either 0 or 1)
+bowlruns:		runs conceded by the bowler in current ball
+pitchLine:		category of the pitch line
+pitchLength:	category of the pitch length
+shotType:		type of the shot played by batsman

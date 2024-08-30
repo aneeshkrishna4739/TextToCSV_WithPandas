@@ -3,3 +3,5 @@ sample.py
 Sample.ipynb
 .ipynb_checkpoints
 .vscode
+cleaned_data.csv
+student.db

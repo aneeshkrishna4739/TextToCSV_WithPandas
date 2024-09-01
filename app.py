@@ -38,6 +38,13 @@ Metadata: There are 4 dataframes df1,df2,df3,df4 which extracted data from files
                 df2=pd.read_excel("Bowling_against_left_right_handers.xlsx")
                 df3=pd.read_csv("batting_stats.csv")
                 df4=pd.read_csv("bowling_stats.csv")
+              
+small description for each of the four dataframes:
+    df1: This dataframe captures the performance of batsmen against various types of bowling styles.
+    df2: This dataframe focuses on the performance of bowlers against batsmen of different batting hands (left-handed or right-handed).
+    df3: This dataframe provides an in-depth overview of a batsman's performance across various matches.
+    df4: This dataframe offers a detailed breakdown of a bowler's performance across multiple matches.
+
 Column Details in each dataframes:
     df1.dtypes:
                 player_id                int64
@@ -115,28 +122,23 @@ Column Details in each dataframes:
 - Prompt 2: "5 Lowest economy among bowlers against Right handed batsmen who played more than 75 matches"
 
     Generated Code:
-    df2[(df2['matches played']>75) & (df2['bat_hand']=='RHB')].sort_values(by='economy',ascending=True).head(5)
+    result=df2[(df2['matches played']>75) & (df2['bat_hand']=='RHB')].sort_values(by='economy',ascending=True).head(5)
               
 - Prompt 3: "5 Batsmen with lowest dot ball percentage who played more than 2000 balls"
 
     Generated Code:
-    df3[(df3['balls_faced']>2000)].sort_values(by='dot_percent',ascending=True).head(5)
+    result=df3[(df3['balls_faced']>2000)].sort_values(by='dot_percent',ascending=True).head(5)
 
 - Prompt 4: "5 right arm fast Bowlers with lowest bowling average who bowled more than 2000 balls"
 
     Generated Code:
-    df4[(df4['ball_bowled']>2000) & (df4['bowling_style']=='RF')].sort_values(by='bowling_average',ascending=True).head(5)    
+    result=df4[(df4['ball_bowled']>2000) & (df4['bowling_style']=='RF')].sort_values(by='bowling_average',ascending=True).head(5)    
                   
 Return only generated code. Always store the output in variable 'result'.
 """
 ]
 
 
-# prompt_csv=["""
-
-
-# """
-# ]
 def get_gemini_response_csv(question, prompt):
     model = genai.GenerativeModel('gemini-pro')
     generation_config = genai.GenerationConfig(stop_sequences = None,
@@ -158,7 +160,7 @@ def execute_pandas_code(code):
     exec(code, {}, local_vars)
     
     # Retrieve the updated DataFrame or result
-    result = local_vars.get('result', local_vars.get('df', None))
+    result = local_vars.get('result', local_vars.get('df1', local_vars.get('df2', local_vars.get('df3', local_vars.get('df4', None)))))
 
     # Check if a plot has been created
     figure = plt.gcf() if plt.get_fignums() else None

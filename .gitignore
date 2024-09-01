@@ -4,5 +4,5 @@ Sample.ipynb
 .ipynb_checkpoints
 .vscode
 cleaned_data.csv
-student.db
+feedback.db
 .env

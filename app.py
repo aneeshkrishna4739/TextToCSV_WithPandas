@@ -151,20 +151,48 @@ def get_gemini_response_csv(question, prompt):
 # Function to execute the generated Pandas code
 
 def execute_pandas_code(code):
-    
     local_vars = {'df1': df1,'df2': df2,'df3': df3,'df4': df4, 'pd': pd, 'plt': plt}
-    
     exec(code, {}, local_vars)
-    
     result = local_vars.get('result', local_vars.get('df1', local_vars.get('df2', local_vars.get('df3', local_vars.get('df4', None)))))
-
-    figure = plt.gcf() if plt.get_fignums() else None
-    
+    figure = plt.gcf() if plt.get_fignums() else None    
     if figure and plt.get_fignums():
         return figure  
     else:
         return result
 
+# Initialize session state
+if 'stage' not in st.session_state:
+    st.session_state.stage = 0
+if 'feedback_submitted' not in st.session_state:
+    st.session_state.feedback_submitted = False
+if 'response' not in st.session_state:
+    st.session_state.response = None
+if 'question' not in st.session_state:
+    st.session_state.question = None
+
+def set_stage(stage):
+    st.session_state.stage = stage
+
+def set_feedback_submitted():
+    st.session_state.feedback_submitted = True
+
+def reset_feedback():
+    st.session_state.feedback_submitted = False
+    st.session_state.response = None
+    st.session_state.question = None
+
+# Function to insert feedback into the database
+def insert_feedback(prompt, generated_code, feedback):
+    conn = sqlite3.connect('feedback.db')
+    print(f"inserting {prompt} {generated_code} {feedback}")
+    c = conn.cursor()
+    c.execute('''
+        INSERT INTO feedback (prompt, generated_code, feedback)
+        VALUES (?, ?, ?)
+    ''', (prompt, generated_code, feedback))
+    conn.commit()
+    conn.close()
+    print("feedback loaded into database")
 # Streamlit page
 
 st.set_page_config(page_title="I can retrieve data using Pandas")
@@ -188,10 +216,13 @@ submit = st.button("Ask the question")
 # If the submit button is clicked
 if submit:
     response = get_gemini_response_csv(question, prompt_csv)
+    st.session_state.response = response  # Save response in session state
+    st.session_state.question = question  # Save question in session state
     st.write(f"Generated Code:\n{response}")
     
     # Execute the generated code and store the result
     result = execute_pandas_code(response)
+    
     # Render the result based on its type
     if isinstance(result, Figure):
         st.subheader("The plot is given below:")
@@ -199,3 +230,30 @@ if submit:
     else:
         st.subheader("The response is:")
         st.write(result)
+    
+    # Move to the feedback stage
+    set_stage(1)
+
+# If the stage is set to 1 (feedback stage)
+if st.session_state.stage == 1 and not st.session_state.feedback_submitted:
+    col1, col2 = st.columns(2)
+    with col1:
+        if st.button("👍"):
+            st.write("Thumbs up clicked!")  
+            st.write(f"Inserting {st.session_state.question} {st.session_state.response} as thumbs up")
+            insert_feedback(st.session_state.question, st.session_state.response, 1)  # 1 for thumbs up
+            st.write("Thank you for your feedback!")
+            set_feedback_submitted()  # Prevents feedback from being submitted again
+    with col2:
+        if st.button("👎"):
+            st.write("Thumbs down clicked!")  
+            st.write(f"Inserting {st.session_state.question} {st.session_state.response} as thumbs down")
+            insert_feedback(st.session_state.question, st.session_state.response, 0)  # 0 for thumbs down
+            st.write("Thank you for your feedback!")
+            set_feedback_submitted()  # Prevents feedback from being submitted again
+
+# Display a reset button to restart the process
+if st.session_state.feedback_submitted:
+    if st.button("Reset"):
+        reset_feedback()
+        set_stage(0)

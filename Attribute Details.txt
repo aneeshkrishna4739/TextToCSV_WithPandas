@@ -1,9 +1,9 @@
-p_match:		match id
+match_id:		match id
 inns:			inning number
-bat:			batsman name	
+batsman:			batsman name	
 p_bat:			player id of the batsman on strike
 team_bat:		batting team
-bowl:			bowler name
+bowler:			bowler name
 p_bowl:			player id of current bowler
 team_bowl:		bowling team
 ball:			ball number of the current over

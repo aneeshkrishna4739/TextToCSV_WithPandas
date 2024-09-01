@@ -7,6 +7,10 @@ import sqlite3
 
 import google.generativeai as genai
 
+
+import pandas as pd
+import matplotlib.pyplot as plt
+from matplotlib.figure import Figure
 ##Configure our API key
 genai.configure(api_key=os.getenv("GOOGLE_API_KEY"))
 
@@ -16,11 +20,11 @@ file_path = 'Attribute Details.txt'
 with open(file_path, 'r') as file:
     attribute_details = file.read()
 
-prompt_csv = [f"""
+prompt_csv = ["""
 Context:
-Assume the role of an expert data analyst specializing in cricket statistics. Our product generates Python code using Pandas based on "text prompts" input by users. These prompts often involve requests for data filtering, aggregation, or other data manipulation tasks using a cricket match dataset stored in a CSV file.
+Assume the role of an expert data analyst specializing in cricket statistics. Our product generates Python code using Pandas based on "text prompts" input by users. These prompts often involve requests for data filtering, aggregation, or other data manipulation tasks using a cricket data stored in a DataFrames.
 
-Your task is to convert these natural language prompts into accurate and efficient Python Pandas code. The dataset for each task will be provided, and you must ensure that the generated code correctly reflects the user's intent.
+Your task is to convert these natural language prompts into accurate and efficient Python Pandas code. The dataframes for each task will be provided, and you must ensure that the generated code correctly reflects the user's intent.
 
 Instructions for Analysis:
 - Convert the natural language prompt into valid Python Pandas code.
@@ -29,84 +33,110 @@ Instructions for Analysis:
 - Enclose each condition with (), especially when handling multiple conditions.
 - Ensure that the code correctly handles the dataset's structure and column types.
 
-The Dataset looks like this:
+Metadata: There are 4 dataframes df1,df2,df3,df4 which extracted data from files in below codes:
+                df1=pd.read_excel("batters_against_bowlingtype.xlsx")
+                df2=pd.read_excel("Bowling_against_left_right_handers.xlsx")
+                df3=pd.read_csv("batting_stats.csv")
+                df4=pd.read_csv("bowling_stats.csv")
+Column Details in each dataframes:
+    df1.dtypes:
+                player_id                int64
+                batsman                 object
+                bowling_style           object
+                matches played           int64
+                runs_scored              int64
+                balls_faced              int64
+                batting_strike_rate    float64
+                dismissals               int64
+                batting_average        float64
+    df2.dtypes:
+                player_id                int64
+                bowler                  object
+                bat_hand                object
+                runs_conceded            int64
+                ball_bowled              int64
+                matches played           int64
+                bowling_style           object
+                economy                float64
+                dismissals               int64
+                bowling_average        float64
+                bowling_strike rate    float64
+    df3.dtypes:
+                player_id                int64
+                batsman                 object
+                matches played           int64
+                runs_scored              int64
+                balls_faced              int64
+                batting_strike_rate    float64
+                dismissals               int64
+                boundary_runs            int64
+                boundary_balls           int64
+                4s                       int64
+                6s                       int64
+                dots                     int64
+                dot_percent            float64
+                boundary_percent       float64
+                batting_average        float64
+    df4.dtypes:
+                player_id                int64
+                bowler                  object
+                runs_conceded            int64
+                ball_bowled              int64
+                matches played           int64
+                bowling_style           object
+                economy                float64
+                dismissals               int64
+                dotballs                 int64
+                dotballs_percent       float64
+                bowling_average        float64
+                bowling_strike rate    float64
+               
+    Columns 'bowling_style' has values :'LFM', 'SLA', 'RM', 'LWS', 'OB', 'RWS', 'RF', 'RFM', 'LF', 'LM', 'LSM'.
+                'LFM' stands for Left Arm Medium Fast
+                'SLA' stands for Left Arm OffSpinner
+                'RM'  stands for Right Arm Medium
+                'LWS' stands for Left Arm WristSpinner, 
+                'OB'  stands for Right Arm OffSpinner
+                'RWS' stands for Right Arm WristSpinner
+                'RF'  stands for Right Arm Fast
+                'RFM' stands for Left Arm Medium Fast
+                'LF'  stands for Left Arm Fast
+                'LM'  stands for Left Arm Medium
+                'LSM' stands for Left Arm Slow Medium
+    Columns 'bat_hand' has values :'RHB', 'LHB'.
+                'RHB' stands for Right Hand Batsman
+                'LHB' stands for Left Hand Batsman
 
-p_match	inns	bat	p_bat	team_bat	bowl	p_bowl	team_bowl	ball	score	out	over	noball	wide	max_balls	date	year	ground	country	winner	toss	competition	bat_hand	bowl_style	bowl_kind	batruns	ballfaced	bowlruns	pitchLine	pitchLength	shotType
-1001349	1	Aaron Finch	5334	Australia	Lasith Malinga	49758	Sri Lanka	1	0	FALSE	1	0	0	120	2/17/2017	2017	Melbourne Cricket Ground	Australia	Sri Lanka	Sri Lanka	T20I	RHB	RF	pace bowler	0	1	0	ON_THE_STUMPS	SHORT_OF_A_GOOD_LENGTH	DEFENDED
-1001349	1	Aaron Finch	5334	Australia	Lasith Malinga	49758	Sri Lanka	2	0	FALSE	1	0	0	120	2/17/2017	2017	Melbourne Cricket Ground	Australia	Sri Lanka	Sri Lanka	T20I	RHB	RF	pace bowler	0	1	0	ON_THE_STUMPS	GOOD_LENGTH	DEFENDED
-1001349	1	Aaron Finch	5334	Australia	Lasith Malinga	49758	Sri Lanka	3	1	FALSE	1	0	0	120	2/17/2017	2017	Melbourne Cricket Ground	Australia	Sri Lanka	Sri Lanka	T20I	RHB	RF	pace bowler	1	1	1	ON_THE_STUMPS	SHORT_OF_A_GOOD_LENGTH	DEFENDED
-1001349	1	Michael Klinger	6161	Australia	Lasith Malinga	49758	Sri Lanka	4	2	FALSE	1	0	0	120	2/17/2017	2017	Melbourne Cricket Ground	Australia	Sri Lanka	Sri Lanka	T20I	RHB	RF	pace bowler	2	1	2	ON_THE_STUMPS	GOOD_LENGTH	FLICK
-1001349	1	Michael Klinger	6161	Australia	Lasith Malinga	49758	Sri Lanka	5	0	FALSE	1	0	0	120	2/17/2017	2017	Melbourne Cricket Ground	Australia	Sri Lanka	Sri Lanka	T20I	RHB	RF	pace bowler	0	1	0	OUTSIDE_OFFSTUMP	SHORT_OF_A_GOOD_LENGTH	DEFENDED
-1001349	1	Michael Klinger	6161	Australia	Lasith Malinga	49758	Sri Lanka	6	3	FALSE	1	0	0	120	2/17/2017	2017	Melbourne Cricket Ground	Australia	Sri Lanka	Sri Lanka	T20I	RHB	RF	pace bowler	3	1	3	OUTSIDE_OFFSTUMP	GOOD_LENGTH	SQUARE_DRIVE
+- Prompt 1: "Calculate top 5 batting average against Offspinners among batsmen who played more than 50 matches."
 
+    Generated Code:
+    result=df1[(df1['matches played']>50) & (df1['bowling_style']=='OB')].sort_values(by='batting_average',ascending=False).head(5)
+
+- Prompt 2: "5 Lowest economy among bowlers against Right handed batsmen who played more than 75 matches"
+
+    Generated Code:
+    df2[(df2['matches played']>75) & (df2['bat_hand']=='RHB')].sort_values(by='economy',ascending=True).head(5)
               
-Metadata: csv has the following columns - 
-    {attribute_details}
+- Prompt 3: "5 Batsmen with lowest dot ball percentage who played more than 2000 balls"
 
+    Generated Code:
+    df3[(df3['balls_faced']>2000)].sort_values(by='dot_percent',ascending=True).head(5)
 
-- Prompt 1: "Calculate Virat Kohli's batting performance, including total runs, boundaries, dot balls, and average."
+- Prompt 4: "5 right arm fast Bowlers with lowest bowling average who bowled more than 2000 balls"
 
-Chain of Thought:
-1. Group the DataFrame by player and bat to calculate unique matches, total runs, and balls faced.
-2. Calculate the strike rate based on the total runs and balls faced.
-3. Count the number of dismissals for the player.
-4. Identify and summarize the boundary shots (4s and 6s).
-5. Count the number of dot balls faced by the player.
-6. Merge all the calculated data into a single DataFrame.
-7. Calculate additional metrics such as dot percentage, boundary percentage, and batting average.
-8. Filter the final DataFrame to show only the records for 'Virat Kohli'.
-
-Generated Code:
-# Grouping the DataFrame by player and bat to calculate unique matches, total runs, and balls faced
-total_runs = df.groupby(['p_bat', 'bat']).agg({{'p_match': 'nunique', 'batruns': 'sum', 'ballfaced': 'sum'}}).reset_index()
-
-# Calculating the strike rate and rounding it to two decimal places
-total_runs['strike rate'] = (total_runs['batruns'] * 100 / total_runs['ballfaced']).round(2)
-
-# Renaming the 'p_match' column to 'matches'
-total_runs.rename(columns={{'p_match': 'matches'}}, inplace=True)
-
-# Counting dismissals
-total_outs = df[df['out'] == True].groupby(['p_bat', 'bat']).size().reset_index(name='dismissals')
-
-# Filtering the DataFrame for boundary shots (4s and 6s) with only one ball faced
-df1 = df[(df['batruns'].isin([4, 6])) & (df['ballfaced'] == 1)].copy()
-
-# Creating new columns for counting 4s and 6s
-df1['4s'] = df1['batruns'].apply(lambda x: 1 if x == 4 else 0)
-df1['6s'] = df1['batruns'].apply(lambda x: 1 if x == 6 else 0)
-
-# Grouping the DataFrame to calculate boundary runs and the number of 4s and 6s
-total_boundaries = df1.groupby(['p_bat', 'bat']).agg({{'batruns': 'sum', 'ballfaced': 'count', '4s': 'sum', '6s': 'sum'}}).reset_index()
-
-# Renaming columns to better reflect the calculated values
-total_boundaries.rename(columns={{'batruns': 'boundary_runs', 'ballfaced': 'boundary_balls'}}, inplace=True)
-
-# Counting the number of dot balls
-total_dots = df[(df['batruns'] == 0) & (df['ballfaced'] == 1)].groupby(['p_bat', 'bat']).agg({{'ballfaced': 'sum'}}).reset_index()
-
-# Renaming the 'ballfaced' column to 'dots'
-total_dots.rename(columns={{'ballfaced': 'dots'}}, inplace=True)
-
-# Merging the runs, outs, boundaries, and dots dataframes
-merged_df = total_runs.merge(total_outs, on=['p_bat', 'bat']).merge(total_boundaries, on=['p_bat', 'bat']).merge(total_dots, on=['p_bat', 'bat'])
-
-# Calculating dot percentage, boundary percentage, and batting average, then rounding to two decimal places
-merged_df['dot%'] = (merged_df['dots'] * 100 / merged_df['ballfaced']).round(2)
-merged_df['boundary%'] = (merged_df['boundary_runs'] * 100 / merged_df['batruns']).round(2)
-merged_df['average'] = (merged_df['batruns'] / merged_df['dismissals']).round(2)
-
-# Filtering the merged DataFrame to show only records for 'Virat Kohli'
-result = merged_df[merged_df['bat'] == 'Virat Kohli']
-
-Remove all the comments when fetching the generated code
+    Generated Code:
+    df4[(df4['ball_bowled']>2000) & (df4['bowling_style']=='RF')].sort_values(by='bowling_average',ascending=True).head(5)    
+                  
+Return only generated code. Always store the output in variable 'result'.
 """
-
 ]
 
 
+# prompt_csv=["""
 
 
+# """
+# ]
 def get_gemini_response_csv(question, prompt):
     model = genai.GenerativeModel('gemini-pro')
     generation_config = genai.GenerationConfig(stop_sequences = None,
@@ -117,23 +147,19 @@ def get_gemini_response_csv(question, prompt):
     response = model.generate_content([prompt[0], question], generation_config=generation_config)
     return response.text
 
-import pandas as pd
-import matplotlib.pyplot as plt
-from matplotlib.figure import Figure
 # Function to execute the generated Pandas code
 
-
-
-def execute_pandas_code(code, csv_file):
+def execute_pandas_code(code):
     
     # Local variables for exec
-    local_vars = {'df': df, 'plt': plt}
+    local_vars = {'df1': df1,'df2': df2,'df3': df3,'df4': df4, 'pd': pd, 'plt': plt}
     
     # Execute the code
     exec(code, {}, local_vars)
     
     # Retrieve the updated DataFrame or result
     result = local_vars.get('result', local_vars.get('df', None))
+
     # Check if a plot has been created
     figure = plt.gcf() if plt.get_fignums() else None
     
@@ -150,12 +176,15 @@ st.set_page_config(page_title="I can retrieve data using Pandas")
 @st.cache_data
 def load_data():
     # This function will be called only once
-    df=pd.read_csv("cleaned_data.csv")
+    df1=pd.read_excel("data/batters_against_bowlingtype.xlsx")
+    df2=pd.read_excel("data/Bowling_against_left_right_handers.xlsx")
+    df3=pd.read_csv("data/batting_stats.csv")
+    df4=pd.read_csv("data/bowling_stats.csv")
     print("data loaded")
-    return df
+    return df1,df2,df3,df4
 st.header("Gemini App to Retrieve CSV Data")
 
-df = load_data()
+df1,df2,df3,df4 = load_data()
 
 question = st.text_input("Input:", key="input")
 submit = st.button("Ask the question")
@@ -166,7 +195,7 @@ if submit:
     st.write(f"Generated Code:\n{response}")
     
     # Execute the generated code and store the result
-    result = execute_pandas_code(response, "cleaned_data.csv")
+    result = execute_pandas_code(response)
     # Render the result based on its type
     if isinstance(result, Figure):
         st.subheader("The plot is given below:")

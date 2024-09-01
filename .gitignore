@@ -5,3 +5,4 @@ Sample.ipynb
 .vscode
 cleaned_data.csv
 student.db
+.env

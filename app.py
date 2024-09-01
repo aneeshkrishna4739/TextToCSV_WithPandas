@@ -1,5 +1,5 @@
 from dotenv import load_dotenv
-load_dotenv() ##laod all environment variables
+load_dotenv() 
 
 import streamlit as st
 import os
@@ -16,7 +16,6 @@ genai.configure(api_key=os.getenv("GOOGLE_API_KEY"))
 
 file_path = 'Attribute Details.txt'
 
-# Use 'with' to open the file and read its content
 with open(file_path, 'r') as file:
     attribute_details = file.read()
 
@@ -153,21 +152,16 @@ def get_gemini_response_csv(question, prompt):
 
 def execute_pandas_code(code):
     
-    # Local variables for exec
     local_vars = {'df1': df1,'df2': df2,'df3': df3,'df4': df4, 'pd': pd, 'plt': plt}
     
-    # Execute the code
     exec(code, {}, local_vars)
     
-    # Retrieve the updated DataFrame or result
     result = local_vars.get('result', local_vars.get('df1', local_vars.get('df2', local_vars.get('df3', local_vars.get('df4', None)))))
 
-    # Check if a plot has been created
     figure = plt.gcf() if plt.get_fignums() else None
     
-    # Determine what to return based on what was generated
     if figure and plt.get_fignums():
-        return figure  # Return the plot
+        return figure  
     else:
         return result
 

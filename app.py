@@ -1,21 +1,20 @@
 from dotenv import load_dotenv
-load_dotenv() 
-
-import streamlit as st
 import os
+import streamlit as st
 import sqlite3
-
 import google.generativeai as genai
-
-
 import pandas as pd
 import matplotlib.pyplot as plt
 from matplotlib.figure import Figure
-##Configure our API key
+
+# Load environment variables
+load_dotenv()
+
+# Configure our API key
 genai.configure(api_key=os.getenv("GOOGLE_API_KEY"))
 
+# Read the prompt template from a text file
 file_path = 'Attribute Details.txt'
-
 with open(file_path, 'r') as file:
     attribute_details = file.read()
 
@@ -138,77 +137,69 @@ Return only generated code. Always store the output in variable 'result'.
 ]
 
 
+# Define functions
 def get_gemini_response_csv(question, prompt):
     model = genai.GenerativeModel('gemini-pro')
-    generation_config = genai.GenerationConfig(stop_sequences = None,
-  temperature=0.6,
-  top_p=1.0,
-  top_k=32,
-  candidate_count=1,)
+    generation_config = genai.GenerationConfig(
+        temperature=0.6,
+        top_p=1.0,
+        top_k=32,
+        candidate_count=1,
+    )
     response = model.generate_content([prompt[0], question], generation_config=generation_config)
     return response.text
 
-# Function to execute the generated Pandas code
-
 def execute_pandas_code(code):
-    local_vars = {'df1': df1,'df2': df2,'df3': df3,'df4': df4, 'pd': pd, 'plt': plt}
-    exec(code, {}, local_vars)
-    result = local_vars.get('result', local_vars.get('df1', local_vars.get('df2', local_vars.get('df3', local_vars.get('df4', None)))))
+    local_vars = {'df1': df1, 'df2': df2, 'df3': df3, 'df4': df4, 'pd': pd, 'plt': plt}
+    try:
+        exec(code, {}, local_vars)
+        result = local_vars.get('result', next((v for v in (local_vars.get('df1'), local_vars.get('df2'), local_vars.get('df3'), local_vars.get('df4')) if v is not None), None))
+    except Exception as e:
+        raise e
     figure = plt.gcf() if plt.get_fignums() else None    
-    if figure and plt.get_fignums():
-        return figure  
-    else:
-        return result
+    return figure if figure else result
 
-# Initialize session state
-if 'stage' not in st.session_state:
-    st.session_state.stage = 0
-if 'feedback_submitted' not in st.session_state:
-    st.session_state.feedback_submitted = False
-if 'response' not in st.session_state:
-    st.session_state.response = None
-if 'question' not in st.session_state:
-    st.session_state.question = None
-
-def set_stage(stage):
-    st.session_state.stage = stage
-
-def set_feedback_submitted():
-    st.session_state.feedback_submitted = True
-
-def reset_feedback():
-    st.session_state.feedback_submitted = False
-    st.session_state.response = None
-    st.session_state.question = None
-
-# Function to insert feedback into the database
 def insert_feedback(prompt, generated_code, feedback):
     conn = sqlite3.connect('feedback.db')
-    print(f"inserting {prompt} {generated_code} {feedback}")
-    c = conn.cursor()
-    c.execute('''
-        INSERT INTO feedback (prompt, generated_code, feedback)
-        VALUES (?, ?, ?)
-    ''', (prompt, generated_code, feedback))
-    conn.commit()
-    conn.close()
-    print("feedback loaded into database")
-# Streamlit page
+    try:
+        with conn:
+            conn.execute('''
+                INSERT INTO feedback (prompt, generated_code, feedback)
+                VALUES (?, ?, ?)
+            ''', (prompt, generated_code, feedback))
+    finally:
+        conn.close()
 
-st.set_page_config(page_title="I can retrieve data using Pandas")
+# Initialize session state
+if 'app_state' not in st.session_state:
+    st.session_state.app_state = {
+        'feedback_submitted': False,
+        'response': None,
+        'question': None,
+        'thumbs_clicked': False
+    }
+
+def reset_feedback():
+    st.session_state.app_state.update({
+        'feedback_submitted': False,
+        'response': None,
+        'question': None
+    })
+
+# Streamlit page configuration
+st.set_page_config(page_title="Gemini App to Retrieve CSV Data")
 
 @st.cache_data
 def load_data():
-    # This function will be called only once
-    df1=pd.read_excel("data/batters_against_bowlingtype.xlsx")
-    df2=pd.read_excel("data/Bowling_against_left_right_handers.xlsx")
-    df3=pd.read_csv("data/batting_stats.csv")
-    df4=pd.read_csv("data/bowling_stats.csv")
-    print("data loaded")
-    return df1,df2,df3,df4
+    df1 = pd.read_excel("data/batters_against_bowlingtype.xlsx")
+    df2 = pd.read_excel("data/Bowling_against_left_right_handers.xlsx")
+    df3 = pd.read_csv("data/batting_stats.csv")
+    df4 = pd.read_csv("data/bowling_stats.csv")
+    return df1, df2, df3, df4
+
 st.header("Gemini App to Retrieve CSV Data")
 
-df1,df2,df3,df4 = load_data()
+df1, df2, df3, df4 = load_data()
 
 question = st.text_input("Input:", key="input")
 submit = st.button("Ask the question")
@@ -216,44 +207,44 @@ submit = st.button("Ask the question")
 # If the submit button is clicked
 if submit:
     response = get_gemini_response_csv(question, prompt_csv)
-    st.session_state.response = response  # Save response in session state
-    st.session_state.question = question  # Save question in session state
+    st.session_state.app_state.update({
+        'response': response,
+        'question': question,
+        'feedback_submitted': False
+    })
     st.write(f"Generated Code:\n{response}")
     
-    # Execute the generated code and store the result
-    result = execute_pandas_code(response)
-    
-    # Render the result based on its type
-    if isinstance(result, Figure):
-        st.subheader("The plot is given below:")
-        st.pyplot(result)
-    else:
-        st.subheader("The response is:")
-        st.write(result)
-    
-    # Move to the feedback stage
-    set_stage(1)
+    try:
+        result = execute_pandas_code(response)
+        if isinstance(result, Figure):
+            st.subheader("The plot is given below:")
+            st.pyplot(result)
+        else:
+            st.subheader("The response is:")
+            st.write(result)
+    except Exception as e:
+        st.write("An error occurred while executing the code.")
+        st.write(f"Error: {e}")
+        insert_feedback(question, response, 0)  # Log failure as feedback
 
-# If the stage is set to 1 (feedback stage)
-if st.session_state.stage == 1 and not st.session_state.feedback_submitted:
+# Feedback stage
+if st.session_state.app_state['response'] and not st.session_state.app_state['feedback_submitted']:
     col1, col2 = st.columns(2)
+    
     with col1:
         if st.button("👍"):
-            st.write("Thumbs up clicked!")  
-            st.write(f"Inserting {st.session_state.question} {st.session_state.response} as thumbs up")
-            insert_feedback(st.session_state.question, st.session_state.response, 1)  # 1 for thumbs up
-            st.write("Thank you for your feedback!")
-            set_feedback_submitted()  # Prevents feedback from being submitted again
+            insert_feedback(st.session_state.app_state['question'], st.session_state.app_state['response'], 1)  # 1 for thumbs up
+            st.success("Thank you for your feedback!")
+            st.session_state.app_state['feedback_submitted'] = True
+    
     with col2:
         if st.button("👎"):
-            st.write("Thumbs down clicked!")  
-            st.write(f"Inserting {st.session_state.question} {st.session_state.response} as thumbs down")
-            insert_feedback(st.session_state.question, st.session_state.response, 0)  # 0 for thumbs down
-            st.write("Thank you for your feedback!")
-            set_feedback_submitted()  # Prevents feedback from being submitted again
+            insert_feedback(st.session_state.app_state['question'], st.session_state.app_state['response'], 0)  # 0 for thumbs down
+            st.success("Thank you for your feedback!")
+            st.session_state.app_state['feedback_submitted'] = True
 
 # Display a reset button to restart the process
-if st.session_state.feedback_submitted:
+if st.session_state.app_state['feedback_submitted']:
     if st.button("Reset"):
         reset_feedback()
-        set_stage(0)
+        st.cache_data.clear()  # Clear cache to reset the page

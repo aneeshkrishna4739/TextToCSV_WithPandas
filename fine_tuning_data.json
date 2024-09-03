@@ -1,0 +1,30 @@
+[
+    {
+        "prompt": "batting average of Virat Kohli",
+        "completion": "result=df3[df3['batsman']=='Virat Kohli']['batting_average'].head()"
+    },
+    {
+        "prompt": "Top 10 batting average who played atleast 100 matches",
+        "completion": "result=df1[(df1['matches played']>=100)].sort_values(by='batting_average',ascending=False).head(10)"
+    },
+    {
+        "prompt": "bar plot of Top 10 batting strike rate who faced more than 1000 balls",
+        "completion": "result=df3[(df3['balls_faced']>1000)].sort_values(by='batting_strike_rate',ascending=False).head(10).plot(kind='bar',x='batsman',y='batting_strike_rate')"
+    },
+    {
+        "prompt": "bar plot for top 5 batting average vs right arm medium fast bowlers who faced at least 1000 balls",
+        "completion": "result=df1[(df1['bowling_style']=='RFM') & (df1['balls_faced']>1000)].sort_values(by='batting_average',ascending=False).head(5).plot.barh(x='batsman',y='batting_average')"
+    },
+    {
+        "prompt": "pie chart for all batting hands",
+        "completion": "result=df2['bat_hand'].value_counts().plot.pie()"
+    },
+    {
+        "prompt": "batting average of Virat Kohli",
+        "completion": "result=df3[(df3['batsman']=='Virat Kohli')].head(1)['batting_average']"
+    },
+    {
+        "prompt": "5 right arm leg spin bowlers who has lowest economy against left hand batters who bowled more than 200 balls",
+        "completion": "result=df2[(df2['bowling_style']=='RWS') & (df2['bat_hand']=='LHB') & (df2['ball_bowled']>200)].sort_values(by='economy',ascending=True).head(5)"
+    }
+]

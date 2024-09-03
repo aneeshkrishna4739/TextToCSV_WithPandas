@@ -1,22 +1,5 @@
-from dotenv import load_dotenv
-import os
-import streamlit as st
 import sqlite3
-import google.generativeai as genai
-import pandas as pd
-import matplotlib.pyplot as plt
-from matplotlib.figure import Figure
-
-# Load environment variables
-load_dotenv()
-
-# Configure our API key
-genai.configure(api_key=os.getenv("GOOGLE_API_KEY"))
-
-# Read the prompt template from a text file
-file_path = 'Attribute Details.txt'
-with open(file_path, 'r') as file:
-    attribute_details = file.read()
+import json
 
 prompt_csv = ["""
 Context:
@@ -137,114 +120,34 @@ Return only generated code. Always store the output in variable 'result'.
 ]
 
 
-# Define functions
-def get_gemini_response_csv(question, prompt):
-    model = genai.GenerativeModel('gemini-1.0-pro')
-    generation_config = genai.GenerationConfig(
-        temperature=0.6,
-        top_p=1.0,
-        top_k=32,
-        candidate_count=1,
-    )
-    response = model.generate_content([prompt[0], question], generation_config=generation_config)
-    return response.text
-
-def execute_pandas_code(code):
-    local_vars = {'df1': df1, 'df2': df2, 'df3': df3, 'df4': df4, 'pd': pd, 'plt': plt}
+# Connect to the SQLite database
+def extract_feedback_data(db_path='feedback.db'):
+    conn = sqlite3.connect(db_path)
     try:
-        exec(code, {}, local_vars)
-        result = local_vars.get('result', next((v for v in (local_vars.get('df1'), local_vars.get('df2'), local_vars.get('df3'), local_vars.get('df4')) if v is not None), None))
-    except Exception as e:
-        raise e
-    figure = plt.gcf() if plt.get_fignums() else None    
-    return figure if figure else result
-
-def insert_feedback(prompt, generated_code, feedback):
-    conn = sqlite3.connect('feedback.db')
-    try:
-        with conn:
-            conn.execute('''
-                INSERT INTO feedback (prompt, generated_code, feedback)
-                VALUES (?, ?, ?)
-            ''', (prompt, generated_code, feedback))
+        cursor = conn.execute('SELECT prompt, generated_code, feedback FROM feedback')
+        feedback_data = cursor.fetchall()
     finally:
         conn.close()
+    return feedback_data
 
-# Initialize session state
-if 'app_state' not in st.session_state:
-    st.session_state.app_state = {
-        'feedback_submitted': False,
-        'response': None,
-        'question': None,
-        'thumbs_clicked': False
-    }
-
-def reset_feedback():
-    st.session_state.app_state.update({
-        'feedback_submitted': False,
-        'response': None,
-        'question': None
-    })
-
-# Streamlit page configuration
-st.set_page_config(page_title="Gemini App to Retrieve CSV Data")
-
-@st.cache_data
-def load_data():
-    df1 = pd.read_excel("data/batters_against_bowlingtype.xlsx")
-    df2 = pd.read_excel("data/Bowling_against_left_right_handers.xlsx")
-    df3 = pd.read_csv("data/batting_stats.csv")
-    df4 = pd.read_csv("data/bowling_stats.csv")
-    return df1, df2, df3, df4
-
-st.header("Gemini App to Retrieve CSV Data")
-
-df1, df2, df3, df4 = load_data()
-
-question = st.text_input("Input:", key="input")
-submit = st.button("Ask the question")
-
-# If the submit button is clicked
-if submit:
-    response = get_gemini_response_csv(question, prompt_csv)
-    st.session_state.app_state.update({
-        'response': response,
-        'question': question,
-        'feedback_submitted': False
-    })
-    st.write(f"Generated Code:\n{response}")
+# Convert the feedback data to JSON format
+def create_json_for_finetuning(feedback_data, output_file='fine_tuning_data.json'):
+    data = []
     
-    try:
-        result = execute_pandas_code(response)
-        if isinstance(result, Figure):
-            st.subheader("The plot is given below:")
-            st.pyplot(result)
-        else:
-            st.subheader("The response is:")
-            st.write(result)
-    except Exception as e:
-        st.write("An error occurred while executing the code.")
-        st.write(f"Error: {e}")
-        insert_feedback(question, response, 0)  # Log failure as feedback
-
-# Feedback stage
-if st.session_state.app_state['response'] and not st.session_state.app_state['feedback_submitted']:
-    col1, col2 = st.columns(2)
+    for prompt, generated_code, feedback in feedback_data:
+        # Only consider feedback where the generated code was successful (feedback == 1)
+        if feedback == 1:
+            data.append({
+                "prompt": prompt_csv[0]+prompt,
+                "completion": generated_code
+            })
     
-    with col1:
-        if st.button("👍"):
-            insert_feedback(st.session_state.app_state['question'], st.session_state.app_state['response'], 1)  # 1 for thumbs up
-            st.success("Thank you for your feedback!")
-            st.session_state.app_state['feedback_submitted'] = True
-    
-    with col2:
-        if st.button("👎"):
-            insert_feedback(st.session_state.app_state['question'], st.session_state.app_state['response'], 0)  # 0 for thumbs down
-            st.success("Thank you for your feedback!")
-            st.session_state.app_state['feedback_submitted'] = True
+    # Save the data to a JSON file
+    with open(output_file, 'w') as f:
+        json.dump(data, f, indent=4)
 
-# Display a reset button to restart the process
-if st.session_state.app_state['feedback_submitted']:
-    if st.button("Reset"):
-        reset_feedback()
-        st.cache_data.clear()  # Clear cache to reset the page
+# Extract data from the database
+feedback_data = extract_feedback_data()
+
+# Create JSON file for fine-tuning
+create_json_for_finetuning(feedback_data)

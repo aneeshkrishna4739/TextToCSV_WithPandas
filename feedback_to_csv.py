@@ -1,21 +1,10 @@
-from dotenv import load_dotenv
-import os
-import streamlit as st
 import sqlite3
-import google.generativeai as genai
-import pandas as pd
-import matplotlib.pyplot as plt
-from matplotlib.figure import Figure
+import csv
 
-# Load environment variables
-load_dotenv()
-
-# Configure our API key
-genai.configure(api_key=os.getenv("GOOGLE_API_KEY"))
-
-prompt_csv = ["""
+# Define the context for the prompts
+prompt_csv = """
 Context:
-Assume the role of an expert data analyst specializing in cricket statistics. Our product generates Python code using Pandas based on "text prompts" input by users. These prompts often involve requests for data filtering, aggregation, or other data manipulation tasks using a cricket data stored in a DataFrames.
+Assume the role of an expert data analyst specializing in cricket statistics. Our product generates Python code using Pandas based on "text prompts" input by users. These prompts often involve requests for data filtering, aggregation, or other data manipulation tasks using cricket data stored in DataFrames.
 
 Your task is to convert these natural language prompts into accurate and efficient Python Pandas code. The dataframes for each task will be provided, and you must ensure that the generated code correctly reflects the user's intent.
 
@@ -127,120 +116,40 @@ Column Details in each dataframes:
     Generated Code:
     result=df4[(df4['ball_bowled']>2000) & (df4['bowling_style']=='RF')].sort_values(by='bowling_average',ascending=True).head(5)    
                   
-Return only plain code. Always store the output in variable 'result'.
+Return only generated code. Always store the output in variable 'result'.Ensure you do not add any extra quotes on the code.
 """
-]
 
 
-# Define functions
-def get_gemini_response_csv(question, prompt):
-    model = genai.GenerativeModel('gemini-pro')
-    generation_config = genai.GenerationConfig(
-        temperature=0.6,
-        top_p=1.0,
-        top_k=32,
-        candidate_count=1,
-    )
-    response = model.generate_content([prompt[0], question], generation_config=generation_config)
-    return response.text
-
-def execute_pandas_code(code):
-    code = code.replace("```python", "").replace("```", "")
-    local_vars = {'df1': df1, 'df2': df2, 'df3': df3, 'df4': df4, 'pd': pd, 'plt': plt}
+# Connect to the SQLite database
+def extract_feedback_data(db_path='feedback.db'):
+    conn = sqlite3.connect(db_path)
     try:
-        exec(code, {}, local_vars)
-        result = local_vars.get('result', next((v for v in (local_vars.get('df1'), local_vars.get('df2'), local_vars.get('df3'), local_vars.get('df4')) if v is not None), None))
-    except Exception as e:
-        raise e
-    figure = plt.gcf() if plt.get_fignums() else None    
-    return figure if figure else result
-
-def insert_feedback(prompt, generated_code, feedback):
-    conn = sqlite3.connect('feedback.db')
-    try:
-        with conn:
-            conn.execute('''
-                INSERT INTO feedback (prompt, generated_code, feedback)
-                VALUES (?, ?, ?)
-            ''', (prompt, generated_code, feedback))
+        cursor = conn.execute('SELECT prompt, generated_code, feedback FROM feedback')
+        feedback_data = cursor.fetchall()
     finally:
         conn.close()
+    return feedback_data
 
-# Initialize session state
-if 'app_state' not in st.session_state:
-    st.session_state.app_state = {
-        'feedback_submitted': False,
-        'response': None,
-        'question': None,
-        'thumbs_clicked': False
-    }
+# Convert the feedback data to CSV format
+def create_csv_for_finetuning(feedback_data, output_file='fine_tuning_data.csv'):
+    with open(output_file, 'w', newline='') as csvfile:
+        fieldnames = ['prompt', 'completion']
+        writer = csv.DictWriter(csvfile, fieldnames=fieldnames)
 
-def reset_feedback():
-    st.session_state.app_state.update({
-        'feedback_submitted': False,
-        'response': None,
-        'question': None
-    })
+        writer.writeheader()
+        
+        for prompt, generated_code, feedback in feedback_data:
+            generated_code = generated_code.replace("```python", "").replace("```", "")
+            if feedback == 1:
+                # Correctly concatenate the prompt with context
+                full_prompt = prompt_csv+"\n"+prompt
+                writer.writerow({
+                    'prompt': full_prompt,
+                    'completion': generated_code
+                })
 
-# Streamlit page configuration
-st.set_page_config(page_title="Gemini App to Retrieve CSV Data")
+# Extract data from the database
+feedback_data = extract_feedback_data()
 
-@st.cache_data
-def load_data():
-    df1 = pd.read_excel("data/batters_against_bowlingtype.xlsx")
-    df2 = pd.read_excel("data/Bowling_against_left_right_handers.xlsx")
-    df3 = pd.read_csv("data/batting_stats.csv")
-    df4 = pd.read_csv("data/bowling_stats.csv")
-    return df1, df2, df3, df4
-
-st.header("Gemini App to Retrieve CSV Data")
-
-df1, df2, df3, df4 = load_data()
-
-question = st.text_input("Input:", key="input")
-submit = st.button("Ask the question")
-
-# If the submit button is clicked
-if submit:
-    response = get_gemini_response_csv(question, prompt_csv)
-    st.session_state.app_state.update({
-        'response': response,
-        'question': question,
-        'feedback_submitted': False
-    })
-    st.write(f"Generated Code:\n{response}")
-    
-    try:
-        result = execute_pandas_code(response)
-        if isinstance(result, Figure):
-            st.subheader("The plot is given below:")
-            st.pyplot(result)
-        else:
-            st.subheader("The response is:")
-            st.write(result)
-    except Exception as e:
-        st.write("An error occurred while executing the code.")
-        st.write(f"Error: {e}")
-        insert_feedback(question, response, 0)  # Log failure as feedback
-
-# Feedback stage
-if st.session_state.app_state['response'] and not st.session_state.app_state['feedback_submitted']:
-    col1, col2 = st.columns(2)
-    
-    with col1:
-        if st.button("👍"):
-            insert_feedback(st.session_state.app_state['question'], st.session_state.app_state['response'], 1)  # 1 for thumbs up
-            st.success("Thank you for your feedback!")
-            st.session_state.app_state['feedback_submitted'] = True
-    
-    with col2:
-        if st.button("👎"):
-            insert_feedback(st.session_state.app_state['question'], st.session_state.app_state['response'], 0)  # 0 for thumbs down
-            st.success("Thank you for your feedback!")
-            st.session_state.app_state['feedback_submitted'] = True
-
-# Display a reset button to restart the process
-if st.session_state.app_state['feedback_submitted']:
-    if st.button("Reset"):
-        reset_feedback()
-        st.cache_data.clear()  # Clear cache to reset the page
+# Create CSV file for fine-tuning
+create_csv_for_finetuning(feedback_data)

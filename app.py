@@ -42,8 +42,9 @@ Column Details in each dataframes:
     df1.dtypes:
                 player_id                int64
                 batsman                 object
+                bat_hand                object
                 bowling_style           object
-                matches played           int64
+                matches_played           int64
                 runs_scored              int64
                 balls_faced              int64
                 batting_strike_rate    float64
@@ -53,18 +54,20 @@ Column Details in each dataframes:
                 player_id                int64
                 bowler                  object
                 bat_hand                object
+                bowl_kind               object
                 runs_conceded            int64
                 ball_bowled              int64
-                matches played           int64
+                matches_played           int64
                 bowling_style           object
                 economy                float64
                 dismissals               int64
                 bowling_average        float64
-                bowling_strike rate    float64
+                bowling_strike_rate    float64
     df3.dtypes:
                 player_id                int64
                 batsman                 object
-                matches played           int64
+                bat_hand                object
+                matches_played           int64
                 runs_scored              int64
                 balls_faced              int64
                 batting_strike_rate    float64
@@ -80,16 +83,17 @@ Column Details in each dataframes:
     df4.dtypes:
                 player_id                int64
                 bowler                  object
+                bowl_kind               object
                 runs_conceded            int64
                 ball_bowled              int64
-                matches played           int64
+                matches_played           int64
                 bowling_style           object
                 economy                float64
                 dismissals               int64
                 dotballs                 int64
                 dotballs_percent       float64
                 bowling_average        float64
-                bowling_strike rate    float64
+                bowling_strike_rate    float64
                
     Columns 'bowling_style' has values :'LFM', 'SLA', 'RM', 'LWS', 'OB', 'RWS', 'RF', 'RFM', 'LF', 'LM', 'LSM'.
                 'LFM' stands for Left Arm Medium Fast
@@ -106,27 +110,46 @@ Column Details in each dataframes:
     Columns 'bat_hand' has values :'RHB', 'LHB'.
                 'RHB' stands for Right Hand Batsman
                 'LHB' stands for Left Hand Batsman
+    Columns 'bat_hand' has values :'RHB', 'LHB'.
+                'RHB' stands for Right Hand Batsman
+                'LHB' stands for Left Hand Batsman
+    Columns 'bowl_kind' has values :'spin bowler', 'pace bowler'.
 
 - Prompt 1: "top 5 batting average against Offspinners among batsmen who played more than 50 matches."
 
     Generated Code:
-    result=df1[(df1['matches played']>50) & (df1['bowling_style']=='OB')].sort_values(by='batting_average',ascending=False).head(5)
+    result=df1[(df1['matches_played']>50) & (df1['bowling_style']=='OB')].sort_values(by='batting_average',ascending=False).head(5)
 
 - Prompt 2: "5 Lowest economy among bowlers against Right handed batsmen who played more than 75 matches"
 
     Generated Code:
-    result=df2[(df2['matches played']>75) & (df2['bat_hand']=='RHB')].sort_values(by='economy',ascending=True).head(5)
+    result=df2[(df2['matches_played']>75) & (df2['bat_hand']=='RHB')].sort_values(by='economy',ascending=True).head(5)
               
-- Prompt 3: "5 Batsmen with lowest dot ball percentage who played more than 2000 balls"
+- Prompt 3: "bar plot of Top 10 batting strike rate who faced more than 1000 balls"
 
     Generated Code:
-    result=df3[(df3['balls_faced']>2000)].sort_values(by='dot_percent',ascending=True).head(5)
+    result=df3[(df3['balls_faced']>1000)].sort_values(by='batting_strike_rate',ascending=False).head(10).plot(kind='bar',x='batsman',y='batting_strike_rate')
 
 - Prompt 4: "5 right arm fast Bowlers with lowest bowling average who bowled more than 2000 balls"
 
     Generated Code:
     result=df4[(df4['ball_bowled']>2000) & (df4['bowling_style']=='RF')].sort_values(by='bowling_average',ascending=True).head(5)    
-                  
+
+- Prompt 5: "bar plot 5 pace bowlers bowled 1000+ balls  with lowest bowling average"
+
+    Generated Code:
+    result=df4[(df4['ball_bowled']>1000) & (df4['bowl_kind']=='pace bowler')].sort_values(by='bowling_average',ascending=True).head(5).plot(kind='bar',x='bowler',y='bowling_average')
+
+- Prompt 6: "pie chart for all bowling types"
+
+    Generated Code:
+    result=df1['bowling_style'].value_counts().plot(kind='pie',title='Distribution of bowling types')
+
+- Prompt 6: "pie chart for all bowling kinds"
+
+    Generated Code:
+    result=df4['bowl_kind'].value_counts().plot(kind='pie')
+                              
 Return only plain code. Always store the output in variable 'result'.
 """
 ]
@@ -183,7 +206,7 @@ def reset_feedback():
     })
 
 # Streamlit page configuration
-st.set_page_config(page_title="Gemini App to Retrieve CSV Data")
+st.set_page_config(page_title="Cricket Statistics LLM Chatbot")
 
 @st.cache_data
 def load_data():
@@ -193,7 +216,7 @@ def load_data():
     df4 = pd.read_csv("data/bowling_stats.csv")
     return df1, df2, df3, df4
 
-st.header("Gemini App to Retrieve CSV Data")
+st.header("Cricket Statistics LLM Chatbot")
 
 df1, df2, df3, df4 = load_data()
 
@@ -208,7 +231,6 @@ if submit:
         'question': question,
         'feedback_submitted': False
     })
-    st.write(f"Generated Code:\n{response}")
     
     try:
         result = execute_pandas_code(response)
@@ -222,7 +244,8 @@ if submit:
         st.write("An error occurred while executing the code.")
         st.write(f"Error: {e}")
         insert_feedback(question, response, 0)  # Log failure as feedback
-
+    
+    st.write(f"Generated Code:\n{response}")
 # Feedback stage
 if st.session_state.app_state['response'] and not st.session_state.app_state['feedback_submitted']:
     col1, col2 = st.columns(2)

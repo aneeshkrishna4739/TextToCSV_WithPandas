@@ -1,4 +1,4 @@
-player_id,bowler,bowl_kind,runs_conceded,ball_bowled,matches played,bowling_style,economy,dismissals,dotballs,dotballs_percent,bowling_average,bowling_strike rate
+player_id,bowler,bowl_kind,runs_conceded,ball_bowled,matches_played,bowling_style,economy,dismissals,dotballs,dotballs_percent,bowling_average,bowling_strike_rate
 267455,Rakep Patel,spin bowler,134,144,8,OB,5.58,14,59,40.97,9.57,10.29
 1079377,Ravi Teja,pace bowler,200,185,8,RM,6.49,20,73,39.46,10,9.25
 1261866,John Turner,pace bowler,265,247,12,RFM,6.44,24,120,48.58,11.04,10.29

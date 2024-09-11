@@ -1,4 +1,4 @@
-player_id,batsman,bat_hand,matches played,runs_scored,balls_faced,batting_strike_rate,dismissals,boundary_runs,boundary_balls,4s,6s,dots,dot_percent,boundary_percent,batting_average
+player_id,batsman,bat_hand,matches_played,runs_scored,balls_faced,batting_strike_rate,dismissals,boundary_runs,boundary_balls,4s,6s,dots,dot_percent,boundary_percent,batting_average
 308967,Jos Buttler,RHB,246,8206,5615,146.14,215,5166,1112,753,359,2000,35.62,62.95,38.17
 232359,Colin Munro,LHB,284,7934,5588,141.98,257,5112,1079,681,398,2050,36.69,64.43,30.87
 348144,Babar Azam,RHB,210,7881,6104,129.11,184,4178,974,833,141,1942,31.82,53.01,42.83

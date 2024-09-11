@@ -31,6 +31,7 @@ Column Details in each dataframes:
     df1.dtypes:
                 player_id                int64
                 batsman                 object
+                bat_hand                object
                 bowling_style           object
                 matches played           int64
                 runs_scored              int64
@@ -42,6 +43,7 @@ Column Details in each dataframes:
                 player_id                int64
                 bowler                  object
                 bat_hand                object
+                bowl_kind               object
                 runs_conceded            int64
                 ball_bowled              int64
                 matches played           int64
@@ -49,10 +51,11 @@ Column Details in each dataframes:
                 economy                float64
                 dismissals               int64
                 bowling_average        float64
-                bowling_strike rate    float64
+                bowling_strike_rate    float64
     df3.dtypes:
                 player_id                int64
                 batsman                 object
+                bat_hand                object
                 matches played           int64
                 runs_scored              int64
                 balls_faced              int64
@@ -69,6 +72,7 @@ Column Details in each dataframes:
     df4.dtypes:
                 player_id                int64
                 bowler                  object
+                bowl_kind               object
                 runs_conceded            int64
                 ball_bowled              int64
                 matches played           int64

@@ -164,6 +164,7 @@ def get_gemini_response_csv(question, prompt):
         top_k=32,
         candidate_count=1,
     )
+    print("model:",model)
     response = model.generate_content([prompt[0], question], generation_config=generation_config)
     return response.text
 

@@ -8,3 +8,5 @@ feedback.db
 .env
 .vscode
 python.ipynb
+train.csv
+train.json

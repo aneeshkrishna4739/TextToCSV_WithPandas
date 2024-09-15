@@ -157,7 +157,8 @@ Return only plain code. Always store the output in variable 'result'.
 
 # Define functions
 def get_gemini_response_csv(question, prompt):
-    model = genai.GenerativeModel('gemini-pro')
+    #model = genai.GenerativeModel('gemini-pro')
+    model = genai.GenerativeModel('tunedModels/generate-num-4966')
     generation_config = genai.GenerationConfig(
         temperature=0.6,
         top_p=1.0,

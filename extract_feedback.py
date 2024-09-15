@@ -138,7 +138,7 @@ def extract_feedback_data(db_path='feedback.db'):
 # Convert the feedback data to CSV format
 def create_csv_for_finetuning(feedback_data, output_file='train.csv'):
     with open(output_file, 'w', newline='') as csvfile:
-        fieldnames = ['prompt', 'completion']
+        fieldnames = ['text_input', 'output']
         writer = csv.DictWriter(csvfile, fieldnames=fieldnames)
 
         writer.writeheader()
@@ -149,8 +149,8 @@ def create_csv_for_finetuning(feedback_data, output_file='train.csv'):
                 # Correctly concatenate the prompt with context
                 full_prompt = prompt
                 writer.writerow({
-                    'prompt': full_prompt,
-                    'completion': generated_code
+                    'text_input': full_prompt,
+                    'output': generated_code
                 })
 
 def csv_to_json(csv_file, json_file):
@@ -168,7 +168,7 @@ def csv_to_json(csv_file, json_file):
 feedback_data = extract_feedback_data()
 
 # Create CSV file for fine-tuning
-#create_csv_for_finetuning(feedback_data)
+create_csv_for_finetuning(feedback_data)
 
 # Convert the feedback CSV data into JSON format
 csv_to_json("train.csv", "train.json")

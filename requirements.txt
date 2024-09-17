@@ -6,3 +6,4 @@ openpyxl
 #sqlite3
 pandas
 google-cloud-firestore
+google.cloud

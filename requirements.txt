@@ -3,5 +3,5 @@ google-generativeai
 python-dotenv
 matplotlib
 openpyxl
-sqlite3
+#sqlite3
 pandas

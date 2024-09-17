@@ -50,6 +50,7 @@ Column Details in each dataframes:
                 batting_strike_rate    float64
                 dismissals               int64
                 batting_average        float64
+                Country                 object
     df2.dtypes:
                 player_id                int64
                 bowler                  object
@@ -63,6 +64,7 @@ Column Details in each dataframes:
                 dismissals               int64
                 bowling_average        float64
                 bowling_strike_rate    float64
+                Country                 object
     df3.dtypes:
                 player_id                int64
                 batsman                 object
@@ -80,6 +82,7 @@ Column Details in each dataframes:
                 dot_percent            float64
                 boundary_percent       float64
                 batting_average        float64
+                Country                 object
     df4.dtypes:
                 player_id                int64
                 bowler                  object
@@ -94,6 +97,7 @@ Column Details in each dataframes:
                 dotballs_percent       float64
                 bowling_average        float64
                 bowling_strike_rate    float64
+                Country                 object
                
     Columns 'bowling_style' has values :'LFM', 'SLA', 'RM', 'LWS', 'OB', 'RWS', 'RF', 'RFM', 'LF', 'LM', 'LSM'.
                 'LFM' stands for Left Arm Medium Fast
@@ -153,7 +157,6 @@ Column Details in each dataframes:
 Return only plain code. Always store the output in variable 'result'.
 """
 ]
-
 
 # Define functions
 def get_gemini_response_csv(question, prompt):

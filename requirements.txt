@@ -4,3 +4,4 @@ python-dotenv
 matplotlib
 openpyxl
 sqlite3
+pandas

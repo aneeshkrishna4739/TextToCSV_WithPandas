@@ -1,7 +1,8 @@
 from dotenv import load_dotenv
 import os
 import streamlit as st
-import sqlite3
+#import sqlite3
+from google.cloud import firestore
 import google.generativeai as genai
 import pandas as pd
 import matplotlib.pyplot as plt
@@ -12,6 +13,9 @@ load_dotenv()
 
 # Configure our API key
 genai.configure(api_key=os.getenv("GOOGLE_API_KEY"))
+
+# Initialize Firestore client
+db = firestore.Client()
 
 prompt_csv = ["""
 Context:
@@ -184,15 +188,14 @@ def execute_pandas_code(code):
     return figure if figure else result
 
 def insert_feedback(prompt, generated_code, feedback):
-    conn = sqlite3.connect('feedback.db')
-    try:
-        with conn:
-            conn.execute('''
-                INSERT INTO feedback (prompt, generated_code, feedback)
-                VALUES (?, ?, ?)
-            ''', (prompt, generated_code, feedback))
-    finally:
-        conn.close()
+    feedback_ref = db.collection('feedback').document()  # Create a new document
+    feedback_data = {
+        'prompt': prompt,
+        'generated_code': generated_code,
+        'feedback': feedback
+    }
+    feedback_ref.set(feedback_data)  # Insert the data into Firestore
+    st.success("Feedback submitted successfully")
 
 # Initialize session state
 if 'app_state' not in st.session_state:
@@ -248,27 +251,26 @@ if submit:
     except Exception as e:
         st.write("An error occurred while executing the code.")
         st.write(f"Error: {e}")
-        #insert_feedback(question, response, 0)  # Log failure as feedback
+        insert_feedback(question, response, 0)  # Log failure as feedback
     
     st.write(f"Generated Code:\n{response}")
-# # Feedback stage
-# if st.session_state.app_state['response'] and not st.session_state.app_state['feedback_submitted']:
-#     col1, col2 = st.columns(2)
+if st.session_state.app_state['response'] and not st.session_state.app_state['feedback_submitted']:
+    col1, col2 = st.columns(2)
     
-#     with col1:
-#         if st.button("👍"):
-#             insert_feedback(st.session_state.app_state['question'], st.session_state.app_state['response'], 1)  # 1 for thumbs up
-#             st.success("Thank you for your feedback!")
-#             st.session_state.app_state['feedback_submitted'] = True
+    with col1:
+        if st.button("👍"):
+            insert_feedback(st.session_state.app_state['question'], st.session_state.app_state['response'], 1)  # 1 for thumbs up
+            st.success("Thank you for your feedback!")
+            st.session_state.app_state['feedback_submitted'] = True
     
-#     with col2:
-#         if st.button("👎"):
-#             insert_feedback(st.session_state.app_state['question'], st.session_state.app_state['response'], 0)  # 0 for thumbs down
-#             st.success("Thank you for your feedback!")
-#             st.session_state.app_state['feedback_submitted'] = True
+    with col2:
+        if st.button("👎"):
+            insert_feedback(st.session_state.app_state['question'], st.session_state.app_state['response'], 0)  # 0 for thumbs down
+            st.success("Thank you for your feedback!")
+            st.session_state.app_state['feedback_submitted'] = True
 
-# # Display a reset button to restart the process
-# if st.session_state.app_state['feedback_submitted']:
-#     if st.button("Reset"):
-#         reset_feedback()
-#         st.cache_data.clear()  # Clear cache to reset the page
+# Display a reset button to restart the process
+if st.session_state.app_state['feedback_submitted']:
+    if st.button("Reset"):
+        reset_feedback()
+        st.cache_data.clear()  # Clear cache to reset the page

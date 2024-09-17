@@ -5,3 +5,4 @@ matplotlib
 openpyxl
 #sqlite3
 pandas
+google-cloud-firestore

@@ -248,27 +248,27 @@ if submit:
     except Exception as e:
         st.write("An error occurred while executing the code.")
         st.write(f"Error: {e}")
-        insert_feedback(question, response, 0)  # Log failure as feedback
+        #insert_feedback(question, response, 0)  # Log failure as feedback
     
     st.write(f"Generated Code:\n{response}")
-# Feedback stage
-if st.session_state.app_state['response'] and not st.session_state.app_state['feedback_submitted']:
-    col1, col2 = st.columns(2)
+# # Feedback stage
+# if st.session_state.app_state['response'] and not st.session_state.app_state['feedback_submitted']:
+#     col1, col2 = st.columns(2)
     
-    with col1:
-        if st.button("👍"):
-            insert_feedback(st.session_state.app_state['question'], st.session_state.app_state['response'], 1)  # 1 for thumbs up
-            st.success("Thank you for your feedback!")
-            st.session_state.app_state['feedback_submitted'] = True
+#     with col1:
+#         if st.button("👍"):
+#             insert_feedback(st.session_state.app_state['question'], st.session_state.app_state['response'], 1)  # 1 for thumbs up
+#             st.success("Thank you for your feedback!")
+#             st.session_state.app_state['feedback_submitted'] = True
     
-    with col2:
-        if st.button("👎"):
-            insert_feedback(st.session_state.app_state['question'], st.session_state.app_state['response'], 0)  # 0 for thumbs down
-            st.success("Thank you for your feedback!")
-            st.session_state.app_state['feedback_submitted'] = True
+#     with col2:
+#         if st.button("👎"):
+#             insert_feedback(st.session_state.app_state['question'], st.session_state.app_state['response'], 0)  # 0 for thumbs down
+#             st.success("Thank you for your feedback!")
+#             st.session_state.app_state['feedback_submitted'] = True
 
-# Display a reset button to restart the process
-if st.session_state.app_state['feedback_submitted']:
-    if st.button("Reset"):
-        reset_feedback()
-        st.cache_data.clear()  # Clear cache to reset the page
+# # Display a reset button to restart the process
+# if st.session_state.app_state['feedback_submitted']:
+#     if st.button("Reset"):
+#         reset_feedback()
+#         st.cache_data.clear()  # Clear cache to reset the page

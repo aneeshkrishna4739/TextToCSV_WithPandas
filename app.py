@@ -7,15 +7,31 @@ import google.generativeai as genai
 import pandas as pd
 import matplotlib.pyplot as plt
 from matplotlib.figure import Figure
+import base64
+import json
+from google.oauth2 import service_account
 
 # Load environment variables
 load_dotenv()
 
 # Configure our API key
 genai.configure(api_key=os.getenv("GOOGLE_API_KEY"))
+# Load Streamlit secrets
+credentials_base64 = os.getenv("GOOGLE_CREDENTIALS_BASE64")
 
-# Initialize Firestore client
-db = firestore.Client()
+missing_padding = len(credentials_base64) % 4
+if missing_padding != 0:
+    credentials_base64 += '=' * (4 - missing_padding)
+
+# Decode and load the credentials
+credentials_json = base64.b64decode(credentials_base64).decode('utf-8')
+credentials_info = json.loads(credentials_json)
+
+print(credentials_info)
+
+# Use the credentials to initialize Firestore
+credentials = service_account.Credentials.from_service_account_info(credentials_info)
+db = firestore.Client(credentials=credentials)
 
 prompt_csv = ["""
 Context:

@@ -127,7 +127,6 @@ Column Details in each dataframes:
 Return only generated code. Always store the output in variable 'result'.Ensure you do not add any extra quotes on the code.
 """
 
-
 # Function to extract feedback data from Firestore
 def extract_feedback_data_from_firestore(collection_name='feedback'):
     feedback_data = []
@@ -165,7 +164,7 @@ def create_csv_for_finetuning(feedback_data, output_file='train.csv'):
                     'text_input': full_prompt,
                     'output': generated_code
                 })
-                
+
 def csv_to_json(csv_file, json_file):
     # Open the CSV file for reading
     with open(csv_file, mode='r', newline='') as file:

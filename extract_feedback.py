@@ -1,6 +1,9 @@
-import sqlite3
 import csv
 import json
+from google.cloud import firestore
+
+# Initialize Firestore client
+db = firestore.Client()
 
 # Define the context for the prompts
 prompt_csv = """
@@ -125,14 +128,24 @@ Return only generated code. Always store the output in variable 'result'.Ensure 
 """
 
 
-# Connect to the SQLite database
-def extract_feedback_data(db_path='feedback.db'):
-    conn = sqlite3.connect(db_path)
-    try:
-        cursor = conn.execute('SELECT prompt, generated_code, feedback FROM feedback')
-        feedback_data = cursor.fetchall()
-    finally:
-        conn.close()
+# Function to extract feedback data from Firestore
+def extract_feedback_data_from_firestore(collection_name='feedback'):
+    feedback_data = []
+    
+    # Access the Firestore collection
+    feedback_ref = db.collection(collection_name)
+    
+    # Get all documents in the collection
+    docs = feedback_ref.stream()
+
+    # Fetch each document's data
+    for doc in docs:
+        doc_data = doc.to_dict()
+        prompt = doc_data.get('prompt', '')
+        generated_code = doc_data.get('generated_code', '')
+        feedback = doc_data.get('feedback', 0)  # assuming feedback is 0 or 1
+        feedback_data.append((prompt, generated_code, feedback))
+    
     return feedback_data
 
 # Convert the feedback data to CSV format
@@ -152,7 +165,7 @@ def create_csv_for_finetuning(feedback_data, output_file='train.csv'):
                     'text_input': full_prompt,
                     'output': generated_code
                 })
-
+                
 def csv_to_json(csv_file, json_file):
     # Open the CSV file for reading
     with open(csv_file, mode='r', newline='') as file:
@@ -164,8 +177,8 @@ def csv_to_json(csv_file, json_file):
     with open(json_file, 'w') as file:
         json.dump(data, file, indent=4)
 
-# Extract data from the database
-feedback_data = extract_feedback_data()
+# Extract data from the firestore
+feedback_data = extract_feedback_data_from_firestore()
 
 # Create CSV file for fine-tuning
 create_csv_for_finetuning(feedback_data)

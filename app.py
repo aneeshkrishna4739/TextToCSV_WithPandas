@@ -6,6 +6,7 @@ from google.cloud import firestore
 import google.generativeai as genai
 import pandas as pd
 import matplotlib.pyplot as plt
+import matplotlib.cm as cm
 from matplotlib.figure import Figure
 import base64
 import json
@@ -181,7 +182,7 @@ Return only plain code. Always store the output in variable 'result'.
 # Define functions
 def get_gemini_response_csv(question, prompt):
     #model = genai.GenerativeModel('gemini-pro')
-    model = genai.GenerativeModel('tunedModels/generate-num-4966')
+    model = genai.GenerativeModel('tunedModels/generate-num-1897')
     generation_config = genai.GenerationConfig(
         temperature=0.6,
         top_p=1.0,
@@ -194,7 +195,7 @@ def get_gemini_response_csv(question, prompt):
 
 def execute_pandas_code(code):
     code = code.replace("```python", "").replace("```", "")
-    local_vars = {'df1': df1, 'df2': df2, 'df3': df3, 'df4': df4, 'pd': pd, 'plt': plt}
+    local_vars = {'df1': df1, 'df2': df2, 'df3': df3, 'df4': df4, 'pd': pd, 'plt': plt, 'cm':cm}
     try:
         exec(code, {}, local_vars)
         result = local_vars.get('result', next((v for v in (local_vars.get('df1'), local_vars.get('df2'), local_vars.get('df3'), local_vars.get('df4')) if v is not None), None))

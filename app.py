@@ -34,6 +34,8 @@ print(credentials_info)
 credentials = service_account.Credentials.from_service_account_info(credentials_info)
 db = firestore.Client(credentials=credentials)
 
+firestore_collection=os.getenv("FIRESTORE_COLLECTION")
+
 prompt_csv = ["""
 Context:
 Assume the role of an expert data analyst specializing in cricket statistics. Our product generates Python code using Pandas based on "text prompts" input by users. These prompts often involve requests for data filtering, aggregation, or other data manipulation tasks using a cricket data stored in a DataFrames.
@@ -205,7 +207,8 @@ def execute_pandas_code(code):
     return figure if figure else result
 
 def insert_feedback(prompt, generated_code, feedback):
-    feedback_ref = db.collection('feedback').document()  # Create a new document
+    #feedback_ref = db.collection('feedback_dev').document()  # Create a new document
+    feedback_ref = db.collection('feedback_public').document()  # Create a new document
     feedback_data = {
         'prompt': prompt,
         'generated_code': generated_code,

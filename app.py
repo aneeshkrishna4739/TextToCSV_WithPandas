@@ -172,10 +172,10 @@ Column Details in each dataframes:
     Generated Code:
     result=df1['bowling_style'].value_counts().plot(kind='pie',title='Distribution of bowling types')
 
-- Prompt 6: "pie chart for all bowling kinds"
+- Prompt 7: "highest 10 run scorers, bar plot, color bars for players with different countries, add legends to respective countries"
 
     Generated Code:
-    result=df4['bowl_kind'].value_counts().plot(kind='pie')
+    top_10 = df3[['batsman', 'runs_scored', 'Country']].sort_values(by='runs_scored', ascending=False).head(10)\nunique_countries = top_10['Country'].unique()\ncolor_map = {country: color for country, color in zip(unique_countries, plt.get_cmap('tab10').colors)}\ncolors = top_10['Country'].map(color_map)\ntop_10.plot(kind='bar', x='batsman', y='runs_scored', color=colors, legend=False)\nhandles = [plt.Rectangle((0, 0), 1, 1, color=color_map[country]) for country in unique_countries]\nplt.legend(handles, unique_countries, title='Country')\nplt.xlabel('Batsman')\nplt.ylabel('Runs Scored')\nplt.title('Top 10 Highest Run Scorers')\nresult=plt.show()
                               
 Return only plain code. Always store the output in variable 'result'.
 """

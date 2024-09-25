@@ -1,12 +1,15 @@
 import csv
 import json
 from google.cloud import firestore
-
+from dotenv import load_dotenv
+import os
+# Load environment variables
+load_dotenv()
 # Initialize Firestore client
 db = firestore.Client()
 
 # Function to extract feedback data from Firestore
-def extract_feedback_data_from_firestore(collection_name='feedback'):
+def extract_feedback_data_from_firestore(collection_name):
     feedback_data = []
     
     # Access the Firestore collection
@@ -54,8 +57,9 @@ def csv_to_json(csv_file, json_file):
     with open(json_file, 'w') as file:
         json.dump(data, file, indent=4)
 
+firestore_collection=os.getenv("FIRESTORE_COLLECTION")
 # Extract data from the firestore
-feedback_data = extract_feedback_data_from_firestore()
+feedback_data = extract_feedback_data_from_firestore(firestore_collection)
 
 # Create CSV file for fine-tuning
 create_csv_for_finetuning(feedback_data)

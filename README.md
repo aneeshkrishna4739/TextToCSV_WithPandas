@@ -19,6 +19,9 @@ This project leverages a Large Language Model (LLM) to serve as an expert cricke
 - **Streamlit:** For building an interactive user interface.
 - **SQLite:** Stores feedback data to help improve code generation.
 
+## System Design
+
+![Cricbot System Design](Documentation_content/system_design.jpg)
 ## Getting Started
 
 To get started with the project, follow these steps:

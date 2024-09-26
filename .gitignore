@@ -16,3 +16,4 @@ cric-env/
 encoded_credentials.txt
 google_app_credentials.json
 .DS_Store
+csv_storage.ipynb

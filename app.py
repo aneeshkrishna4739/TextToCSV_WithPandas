@@ -248,6 +248,19 @@ st.header("Cricket Statistics LLM Chatbot")
 
 df1, df2, df3, df4 = load_data()
 
+# Custom CSS to add a background image
+background_image = '''
+    <style>
+    .stApp {
+        background-image: url("data/cricbot-2.png");
+        background-size: cover;
+    }
+    </style>
+    '''
+
+# Inject the CSS with the background image
+st.markdown(background_image, unsafe_allow_html=True)
+
 question = st.text_input("Input:", key="input")
 submit = st.button("Ask the question")
 

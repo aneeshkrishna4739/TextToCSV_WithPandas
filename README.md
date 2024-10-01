@@ -17,7 +17,7 @@ This project leverages a Large Language Model (LLM) to serve as an expert cricke
 - **Pandas:** Utilized for data manipulation and analysis.
 - **Google Gemini Pro LLM:** Converts natural language questions into Pandas code.
 - **Streamlit:** For building an interactive user interface.
-- **SQLite:** Stores feedback data to help improve code generation.
+- **Google FireStore:** Stores feedback data to help improve code generation.
 
 ## System Design
 

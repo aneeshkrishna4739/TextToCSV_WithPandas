@@ -1,0 +1,745 @@
+player_id,bowler,bat_hand,bowl_kind,runs_conceded,ball_bowled,matches_played,bowling_style,economy,dismissals,bowling_average,bowling_strike_rate,Country
+1178061,Alpesh Ramjani,RHB,spin bowler,474,632,34,Left Off Spin,4.5,60,7.9,10.53,Uganda
+1178080,Vraj Patel,RHB,spin bowler,464,556,33,Left Off Spin,5.01,47,9.87,11.83,Kenya
+1218731,Elam Bharathi,RHB,spin bowler,509,591,36,Left Off Spin,5.17,42,12.12,14.07,Germany
+1178055,Yalinde Nkanya,RHB,spin bowler,697,782,45,Left Off Spin,5.35,56,12.45,13.96,Tanzania
+26139,Frank Nsubuga,RHB,spin bowler,569,716,46,Left Off Spin,4.77,45,12.64,15.91,Uganda
+470752,Ally Kimote,RHB,pace bowler,723,634,46,Right Medium,6.84,55,13.15,11.53,Tanzania
+633660,Virandeep Singh,RHB,spin bowler,676,689,50,Left Off Spin,5.89,51,13.25,13.51,Malaysia
+637526,Isaac Okpe,RHB,pace bowler,546,547,41,Right Medium,5.99,41,13.32,13.34,Nigeria
+1151338,Bilal Hassan,RHB,pace bowler,683,629,41,Right Fast,6.52,51,13.39,12.33,Uganda
+731523,Dinesh Nakrani,RHB,pace bowler,714,753,47,Left Medium,5.69,53,13.47,14.21,Uganda
+526441,Mark Adair,LHB,pace bowler,662,538,85,Right Fast,7.38,49,13.51,10.98,Ireland
+535353,Ottniel Baartman,RHB,pace bowler,945,838,53,Right Fast,6.77,69,13.7,12.14,South Africa
+414969,Charles Perchard,RHB,pace bowler,606,581,35,Right Medium,6.26,43,14.09,13.51,Jersey
+784379,Wanindu Hasaranga de Silva,RHB,spin bowler,1843,1671,107,Right Wrist Spin,6.62,130,14.18,12.85,Sri Lanka
+1151255,Clinton Rubagumya,RHB,pace bowler,638,526,43,Right Medium,7.28,43,14.84,12.23,Rwanda
+420490,Henry Ssenyondo,RHB,spin bowler,1041,1159,65,Left Off Spin,5.39,70,14.87,16.56,Uganda
+440162,Lucas Oluoch,RHB,pace bowler,687,661,49,Left Fast,6.24,46,14.93,14.37,Kenya
+1344829,Rizwan Butt,RHB,pace bowler,720,574,34,Right Medium,7.53,47,15.32,12.21,Bahrain
+535393,Senuran Muthusamy,RHB,spin bowler,659,630,48,Left Off Spin,6.28,43,15.33,14.65,South Africa
+432960,Simon Harmer,LHB,spin bowler,883,760,101,Right Off Spin,6.97,57,15.49,13.33,South Africa
+960361,Sandeep Lamichhane,RHB,spin bowler,2378,2165,131,Right Wrist Spin,6.59,153,15.54,14.15,Nepal
+1155599,Martin Akayezu,RHB,pace bowler,872,666,49,Right Medium,7.86,56,15.57,11.89,Rwanda
+40082,Ehsan Khan,RHB,spin bowler,1086,1031,63,Right Off Spin,6.32,69,15.74,14.94,Hong Kong
+932665,Tanvir Islam,RHB,spin bowler,648,605,48,Left Off Spin,6.43,41,15.8,14.76,Bangladesh
+1286457,SanjayKumar Thakor,RHB,spin bowler,664,693,43,Right Wrist Spin,5.75,42,15.81,16.5,Tanzania
+390481,Harshal Patel,RHB,pace bowler,2044,1487,113,Right Medium,8.25,129,15.84,11.53,India
+1204010,Waseem Abbas,RHB,pace bowler,973,788,44,Right Fast,7.41,61,15.95,12.92,Malta
+807509,Emmanuel Sebareme,RHB,spin bowler,750,795,57,Right Off Spin,5.66,47,15.96,16.91,Rwanda
+783423,Imran Khan,RHB,pace bowler,712,573,34,Left Fast,7.46,44,16.18,13.02,Pakistan
+1217359,Sayed Monib,RHB,pace bowler,737,502,32,Right Medium,8.81,45,16.38,11.16,Kuwait
+524253,Norman Vanua,RHB,pace bowler,852,696,48,Right Medium,7.34,52,16.38,13.38,Papua New Guinea
+391832,Roston Chase,LHB,spin bowler,525,537,54,Right Off Spin,5.87,32,16.41,16.78,West Indies
+359649,Mohammed Aslam,RHB,mixture/unknown,741,778,45,Left Off Spin,5.71,45,16.47,17.29,Kuwait
+585081,Khawar Ali,RHB,spin bowler,664,601,38,Right Wrist Spin,6.63,40,16.6,15.02,Oman
+633641,Pavandeep Singh,RHB,spin bowler,916,946,52,Left Off Spin,5.81,55,16.65,17.2,Malaysia
+873769,Sultan Ahmed,RHB,spin bowler,484,502,30,Left Off Spin,5.78,29,16.69,17.31,United Arab Emirates
+625383,Jasprit Bumrah,LHB,pace bowler,1409,1298,159,Right Fast,6.51,84,16.77,15.45,India
+1183927,Muslim Yar,RHB,spin bowler,739,696,37,Left Off Spin,6.37,44,16.8,15.82,Germany
+937953,Bilal Khan,RHB,pace bowler,1664,1474,86,Left Fast,6.77,99,16.81,14.89,Oman
+1271974,Ghulam Ahmadi,RHB,spin bowler,757,763,40,Right Off Spin,5.95,45,16.82,16.96,Germany
+371814,Kevon Cooper,RHB,pace bowler,1111,846,61,Right Medium,7.88,66,16.83,12.82,West Indies
+380561,Obed Harvey,RHB,pace bowler,556,612,33,Left Medium,5.45,33,16.85,18.55,Ghana
+351588,Mark Wood,RHB,pace bowler,913,687,40,Right Fast,7.97,54,16.91,12.72,England
+308515,Shem Ngoche,RHB,spin bowler,1099,1103,67,Left Off Spin,5.98,65,16.91,16.97,Kenya
+307808,Rohan Mustafa,RHB,spin bowler,1019,854,57,Right Off Spin,7.16,60,16.98,14.23,United Arab Emirates
+52912,Ravi Rampaul,LHB,pace bowler,783,556,73,Right Fast,8.45,46,17.02,12.09,West Indies
+1061467,Dillon Heyliger,RHB,pace bowler,566,505,35,Right Medium,6.72,33,17.15,15.3,Canada
+40618,Imran Tahir,LHB,spin bowler,2195,1773,223,Right Wrist Spin,7.43,128,17.15,13.85,South Africa
+459508,Andrew Tye,LHB,pace bowler,1703,1248,187,Right Fast,8.19,99,17.2,12.61,Australia
+493773,Lockie Ferguson,LHB,pace bowler,1060,823,101,Right Fast,7.73,61,17.38,13.49,New Zealand
+793463,Rashid Khan,RHB,spin bowler,6887,6423,387,Right Wrist Spin,6.43,396,17.39,16.22,Afghanistan
+1194795,Matheesha Pathirana,RHB,pace bowler,819,582,40,Right Medium,8.44,47,17.43,12.38,Sri Lanka
+669855,Jofra Archer,LHB,pace bowler,1242,1002,119,Right Fast,7.44,71,17.49,14.11,England
+959769,Ben Sears,RHB,pace bowler,631,523,36,Right Fast,7.24,36,17.53,14.53,New Zealand
+330223,Bernard Scholtz,RHB,spin bowler,1385,1407,86,Left Off Spin,5.91,79,17.53,17.81,Namibia
+638912,Matthew Kelly,RHB,pace bowler,720,525,35,Right Fast,8.23,41,17.56,12.8,Australia
+332980,Charles Amini,RHB,spin bowler,686,674,45,Right Wrist Spin,6.11,39,17.59,17.28,Papua New Guinea
+681305,Hasan Ali,LHB,pace bowler,1480,1116,146,Right Fast,7.96,84,17.62,13.29,Pakistan
+359746,Saad Bin Zafar,RHB,spin bowler,688,662,42,Left Off Spin,6.24,39,17.64,16.97,Canada
+800675,Karan KC,RHB,pace bowler,1448,1103,74,Right Fast,7.88,82,17.66,13.45,Nepal
+1158538,Abbas Afridi,RHB,pace bowler,868,580,42,Right Fast,8.98,49,17.71,11.84,Pakistan
+56125,Shohidul Islam,RHB,pace bowler,798,572,41,Right Medium,8.37,45,17.73,12.71,Bangladesh
+679567,Ben Dwarshuis,LHB,pace bowler,781,656,88,Left Fast,7.14,44,17.75,14.91,Australia
+542023,Lungi Ngidi,RHB,pace bowler,2030,1510,102,Right Fast,8.07,114,17.81,13.25,South Africa
+410763,Abu Jayed,RHB,pace bowler,859,629,53,Right Fast,8.19,48,17.9,13.1,Bangladesh
+533862,Mohammad Naveed,RHB,pace bowler,734,639,39,Right Medium,6.89,41,17.9,15.59,United Arab Emirates
+433614,Zahid Mahmood,RHB,spin bowler,699,526,33,Right Wrist Spin,7.97,39,17.92,13.49,Pakistan
+1161606,Haris Rauf,LHB,pace bowler,1564,1233,148,Right Fast,7.61,87,17.98,14.17,Pakistan
+56268,Arafat Sunny,RHB,spin bowler,1225,1137,79,Left Off Spin,6.46,68,18.01,16.72,Bangladesh
+747315,Nathan Sowter,LHB,spin bowler,703,502,74,Right Wrist Spin,8.4,39,18.03,12.87,England
+784375,Lahiru Kumara,RHB,pace bowler,777,587,38,Right Fast,7.94,43,18.07,13.65,Sri Lanka
+399259,Alasdair Evans,RHB,pace bowler,723,557,38,Right Fast,7.79,40,18.08,13.92,Scotland
+793463,Rashid Khan,LHB,spin bowler,2898,2684,323,Right Wrist Spin,6.48,160,18.11,16.77,Afghanistan
+459257,Tymal Mills,LHB,pace bowler,1217,907,133,Left Fast,8.05,67,18.16,13.54,England
+259551,Junaid Khan,LHB,pace bowler,818,673,83,Left Fast,7.29,45,18.18,14.96,Pakistan
+495551,Sheldon Cottrell,LHB,pace bowler,837,648,87,Left Fast,7.75,46,18.2,14.09,West Indies
+859899,Calvin Harrison,RHB,spin bowler,639,509,36,Right Wrist Spin,7.53,35,18.26,14.54,England
+41324,Mohammad Sami,RHB,pace bowler,1809,1530,98,Right Fast,7.09,99,18.27,15.45,Pakistan
+38141,Jeetan Patel,LHB,spin bowler,603,514,68,Right Off Spin,7.04,33,18.27,15.58,New Zealand
+960361,Sandeep Lamichhane,LHB,spin bowler,951,806,106,Right Wrist Spin,7.08,52,18.29,15.5,Nepal
+526441,Mark Adair,RHB,pace bowler,2031,1576,99,Right Fast,7.73,111,18.3,14.2,Ireland
+7898,Peter Siddle,RHB,pace bowler,1851,1442,93,Right Fast,7.7,101,18.33,14.28,Australia
+308251,David Willey,LHB,pace bowler,1467,1202,163,Left Fast,7.32,80,18.34,15.02,England
+1072470,Shaheen Shah Afridi,RHB,pace bowler,3685,2786,178,Left Fast,7.94,200,18.42,13.93,Pakistan
+24605,Kevin O'Brien,RHB,pace bowler,648,501,42,Right Fast,7.76,35,18.51,14.31,Ireland
+482478,Jan Frylinck,RHB,pace bowler,1185,946,64,Left Fast,7.52,64,18.52,14.78,Namibia
+1241265,Aayan Afzal Khan,RHB,spin bowler,630,650,39,Left Off Spin,5.82,34,18.53,19.12,United Arab Emirates
+324358,Nuwan Pradeep,RHB,pace bowler,799,527,41,Right Fast,9.1,43,18.58,12.26,Sri Lanka
+407875,Craig Miles,RHB,pace bowler,969,679,51,Right Medium,8.56,52,18.63,13.06,England
+1039481,Gus Atkinson,RHB,pace bowler,969,681,44,Right Fast,8.54,52,18.63,13.1,England
+47492,Dale Steyn,RHB,pace bowler,1193,960,65,Right Fast,7.46,64,18.64,15.0,South Africa
+1170471,Tanveer Sangha,RHB,spin bowler,690,568,39,Right Wrist Spin,7.29,37,18.65,15.35,Australia
+414970,Safyaan Sharif,RHB,pace bowler,1307,993,63,Right Fast,7.9,70,18.67,14.19,Scotland
+42699,Saeed Ajmal,RHB,spin bowler,899,732,46,Right Off Spin,7.37,48,18.73,15.25,Pakistan
+553249,Bjorn Fortuin,LHB,spin bowler,825,674,92,Left Off Spin,7.34,44,18.75,15.32,South Africa
+723573,Salum Jumbe,RHB,pace bowler,828,673,47,Right Fast,7.38,44,18.82,15.3,Tanzania
+928067,Josh Little,RHB,pace bowler,2157,1702,113,Left Fast,7.6,114,18.92,14.93,Ireland
+486679,Duanne Olivier,RHB,pace bowler,818,554,38,Right Fast,8.86,43,19.02,12.88,South Africa
+502714,Mitchell Santner,LHB,spin bowler,1085,829,129,Left Off Spin,7.85,57,19.04,14.54,New Zealand
+233514,Thisara Perera,LHB,pace bowler,1143,865,133,Right Fast,7.93,60,19.05,14.42,Sri Lanka
+481979,Anrich Nortje,RHB,pace bowler,2079,1626,110,Right Fast,7.67,109,19.07,14.92,South Africa
+290948,Mohammad Amir,LHB,pace bowler,1816,1623,198,Left Fast,6.71,95,19.12,17.08,Pakistan
+56143,Shakib Al Hasan,LHB,spin bowler,1819,1456,204,Left Off Spin,7.5,95,19.15,15.33,Bangladesh
+1268919,Bilal Muhammad,RHB,pace bowler,537,508,27,Left Medium,6.34,28,19.18,18.14,Malta
+1217274,Sathaiya Veerapathiran,RHB,pace bowler,749,574,41,Right Medium,7.83,39,19.21,14.72,Bahrain
+897549,Will Jacks,RHB,spin bowler,634,536,63,Right Off Spin,7.1,33,19.21,16.24,England
+439952,Chris Morris,LHB,pace bowler,1077,843,117,Right Fast,7.67,56,19.23,15.05,South Africa
+6903,Clint McKay,RHB,pace bowler,1098,840,57,Right Fast,7.84,57,19.26,14.74,Australia
+630174,Delray Rawlins,RHB,spin bowler,868,800,50,Left Off Spin,6.51,45,19.29,17.78,Bermuda
+384525,Zahoor Khan,RHB,pace bowler,1294,1081,65,Right Fast,7.18,67,19.31,16.13,United Arab Emirates
+379145,Tabraiz Shamsi,LHB,spin bowler,1643,1356,156,Left Wrist Spin,7.27,85,19.33,15.95,South Africa
+585083,Zeeshan Maqsood,RHB,spin bowler,1009,904,59,Left Off Spin,6.7,52,19.4,17.38,Oman
+463668,Jake Lintott,RHB,spin bowler,1222,984,67,Left Wrist Spin,7.45,63,19.4,15.62,England
+31820,Ashish Nehra,RHB,pace bowler,952,763,49,Left Fast,7.49,49,19.43,15.57,India
+43590,Wahab Riaz,LHB,pace bowler,1944,1640,206,Left Fast,7.11,100,19.44,16.4,Pakistan
+459508,Andrew Tye,RHB,pace bowler,4980,3656,221,Right Fast,8.17,256,19.45,14.28,Australia
+330902,Mustafizur Rahman,RHB,pace bowler,4048,3291,223,Left Fast,7.38,208,19.46,15.82,Bangladesh
+244639,Harry Gurney,RHB,pace bowler,1987,1500,95,Left Fast,7.95,102,19.48,14.71,England
+440522,Logan van Beek,LHB,pace bowler,761,581,79,Right Fast,7.86,39,19.51,14.9,Netherlands
+974109,Mujeeb Ur Rahman,LHB,spin bowler,1623,1480,171,Right Off Spin,6.58,83,19.55,17.83,Afghanistan
+595419,Brandon Glover,RHB,pace bowler,743,555,44,Right Fast,8.03,38,19.55,14.61,Netherlands
+545467,Junior Dala,RHB,pace bowler,1546,1059,75,Right Medium,8.76,79,19.57,13.41,South Africa
+270484,James Faulkner,LHB,pace bowler,1116,829,112,Left Fast,8.08,57,19.58,14.54,Australia
+653695,Matt Parkinson,RHB,spin bowler,1725,1409,89,Right Wrist Spin,7.35,88,19.6,16.01,England
+1037565,Fitri Sham,RHB,spin bowler,766,698,39,Left Off Spin,6.58,39,19.64,17.9,Malaysia
+9310,Tim Bresnan,RHB,pace bowler,1749,1198,87,Right Fast,8.76,89,19.65,13.46,England
+643885,Saqib Mahmood,RHB,pace bowler,983,676,48,Right Fast,8.72,50,19.66,13.52,England
+333782,Timm van der Gugten,RHB,pace bowler,1870,1372,93,Right Fast,8.18,95,19.68,14.44,Netherlands
+701215,Sompal Kami,RHB,pace bowler,1064,908,71,Right Fast,7.03,54,19.7,16.81,Nepal
+40618,Imran Tahir,RHB,spin bowler,4909,4260,269,Right Wrist Spin,6.91,249,19.71,17.11,South Africa
+261354,Nathan Coulter-Nile,LHB,pace bowler,888,756,91,Right Fast,7.05,45,19.73,16.8,Australia
+49758,Lasith Malinga,LHB,pace bowler,693,592,69,Right Fast,7.02,35,19.8,16.91,Sri Lanka
+414990,Jake Ball,RHB,pace bowler,2337,1561,102,Right Fast,8.98,118,19.81,13.23,England
+398666,Sean Abbott,RHB,pace bowler,2676,1836,126,Right Fast,8.75,135,19.82,13.6,Australia
+595783,Ajaz Patel,RHB,spin bowler,1031,899,63,Left Off Spin,6.88,52,19.83,17.29,New Zealand
+1058508,Abinash Bohara,RHB,pace bowler,1190,961,61,Right Medium,7.43,60,19.83,16.02,Nepal
+596010,Gerald Coetzee,RHB,pace bowler,992,678,46,Right Fast,8.78,50,19.84,13.56,South Africa
+553821,JJ Smit,RHB,pace bowler,1072,946,59,Left Fast,6.8,54,19.85,17.52,Namibia
+450860,Adam Milne,RHB,pace bowler,2363,1783,112,Right Fast,7.95,119,19.86,14.98,New Zealand
+276298,Andre Russell,RHB,pace bowler,5411,3789,309,Right Fast,8.57,272,19.89,13.93,West Indies
+1273409,Kevin Irakoze,RHB,spin bowler,935,839,59,Right Off Spin,6.69,47,19.89,17.85,Rwanda
+326968,Michael Bracewell,RHB,spin bowler,698,513,48,Right Off Spin,8.16,35,19.94,14.66,New Zealand
+450075,Kesrick Williams,RHB,pace bowler,2215,1562,108,Right Fast,8.51,111,19.95,14.07,West Indies
+379887,Lizaad Williams,RHB,pace bowler,1279,961,67,Right Fast,7.99,64,19.98,15.02,South Africa
+553249,Bjorn Fortuin,RHB,spin bowler,1660,1581,105,Left Off Spin,6.3,83,20.0,19.05,South Africa
+370535,Toby Roland-Jones,RHB,pace bowler,962,650,42,Right Fast,8.88,48,20.04,13.54,England
+300619,Rubel Hossain,LHB,pace bowler,963,667,75,Right Fast,8.66,48,20.06,13.9,Bangladesh
+1125976,Arshdeep Singh,LHB,pace bowler,1226,842,105,Left Fast,8.74,61,20.1,13.8,India
+990039,Shoriful Islam,RHB,pace bowler,1449,1015,72,Left Fast,8.57,72,20.12,14.1,Bangladesh
+25913,Mohammad Nabi,LHB,spin bowler,2133,1958,238,Right Off Spin,6.54,106,20.12,18.47,Afghanistan
+275658,Michael Hogan,RHB,pace bowler,1913,1370,88,Right Fast,8.38,95,20.14,14.42,Australia
+971349,Nandre Burger,RHB,pace bowler,1090,862,59,Left Fast,7.59,54,20.19,15.96,South Africa
+401540,Aizaz Khan,RHB,pace bowler,1435,1077,74,Right Fast,7.99,71,20.21,15.17,Hong Kong
+7069,Steve O'Keefe,RHB,spin bowler,1377,1276,73,Left Off Spin,6.47,68,20.25,18.76,Australia
+8917,Moeen Ali,LHB,spin bowler,1584,1346,169,Right Off Spin,7.06,78,20.31,17.26,England
+959771,Nathan Smith,RHB,pace bowler,833,606,40,Right Fast,8.25,41,20.32,14.78,New Zealand
+580400,Khizar Hayat,RHB,spin bowler,671,632,40,Right Off Spin,6.37,33,20.33,19.15,Malaysia
+927119,Ali Khan,RHB,pace bowler,1078,818,62,Right Fast,7.91,53,20.34,15.43,United States of America
+362710,David Payne,RHB,pace bowler,2644,1949,121,Left Fast,8.14,130,20.34,14.99,England
+448243,Rumman Raees,LHB,pace bowler,753,607,78,Left Fast,7.44,37,20.35,16.41,Pakistan
+243945,Tom Smith,RHB,spin bowler,2036,1699,104,Left Off Spin,7.19,100,20.36,16.99,England
+290948,Mohammad Amir,RHB,pace bowler,4379,3573,233,Left Fast,7.35,215,20.37,16.62,Pakistan
+1203754,Junaid Siddique,RHB,pace bowler,1263,995,57,Right Fast,7.62,62,20.37,16.05,United Arab Emirates
+210283,Steven Finn,RHB,pace bowler,2000,1416,86,Right Fast,8.47,98,20.41,14.45,England
+501907,Daryn Dupavillon,RHB,pace bowler,796,651,46,Right Fast,7.34,39,20.41,16.69,South Africa
+955235,Nuwan Thushara,RHB,pace bowler,879,628,42,Right Fast,8.4,43,20.44,14.6,Sri Lanka
+265564,Wayne Parnell,LHB,pace bowler,1064,831,121,Left Fast,7.68,52,20.46,15.98,South Africa
+461632,Reece Topley,RHB,pace bowler,2296,1688,114,Left Fast,8.16,112,20.5,15.07,England
+316363,Imran Khan,RHB,pace bowler,821,601,39,Right Fast,8.2,40,20.52,15.02,Pakistan
+46942,Aaron Phangiso,RHB,spin bowler,1354,1376,86,Left Off Spin,5.9,66,20.52,20.85,South Africa
+625383,Jasprit Bumrah,RHB,pace bowler,3390,2843,179,Right Fast,7.15,165,20.55,17.23,India
+56143,Shakib Al Hasan,RHB,spin bowler,4706,4223,264,Left Off Spin,6.69,229,20.55,18.44,Bangladesh
+654261,Mohammad Asghar,RHB,spin bowler,966,792,48,Left Off Spin,7.32,47,20.55,16.85,Pakistan
+376116,Umesh Yadav,LHB,pace bowler,864,676,89,Right Fast,7.67,42,20.57,16.1,India
+473191,Richard Gleeson,LHB,pace bowler,844,588,77,Right Fast,8.61,41,20.59,14.34,England
+473004,Usman Arshad,RHB,pace bowler,721,506,35,Right Fast,8.55,35,20.6,14.46,England
+789729,Callum Parkinson,LHB,spin bowler,829,563,75,Left Off Spin,8.83,40,20.72,14.08,England
+407265,Josh Davey,RHB,pace bowler,1597,1112,72,Right Fast,8.62,77,20.74,14.44,Scotland
+379774,Colin Ackermann,RHB,spin bowler,1141,983,93,Right Off Spin,6.96,55,20.75,17.87,Netherlands
+45204,Robbie Frylinck,RHB,pace bowler,1267,958,66,Right Medium,7.94,61,20.77,15.7,South Africa
+906783,Obed McCoy,RHB,pace bowler,2244,1564,109,Left Fast,8.61,108,20.78,14.48,West Indies
+450075,Kesrick Williams,LHB,pace bowler,1039,736,92,Right Fast,8.47,50,20.78,14.72,West Indies
+47850,Roelof van der Merwe,RHB,spin bowler,3262,2761,177,Left Off Spin,7.09,157,20.78,17.59,Netherlands
+51439,Dwayne Bravo,RHB,pace bowler,6719,4736,315,Right Medium,8.51,323,20.8,14.66,West Indies
+461632,Reece Topley,LHB,pace bowler,1061,746,97,Left Fast,8.53,51,20.8,14.63,England
+56025,Mahmudullah,RHB,spin bowler,770,634,97,Right Off Spin,7.29,37,20.81,17.14,Bangladesh
+622772,Michael Rae,RHB,pace bowler,812,535,35,Right Fast,9.11,39,20.82,13.72,New Zealand
+538506,Taskin Ahmed,RHB,pace bowler,2394,1802,128,Right Fast,7.97,115,20.82,15.67,Bangladesh
+381743,Daryl Mitchell,RHB,pace bowler,1041,686,71,Right Medium,9.1,50,20.82,13.72,New Zealand
+326016,Bhuvneshwar Kumar,RHB,pace bowler,3817,3100,207,Right Medium,7.39,183,20.86,16.94,India
+379504,Adam Zampa,LHB,spin bowler,1734,1349,175,Right Wrist Spin,7.71,83,20.89,16.25,Australia
+854909,Blair Tickner,RHB,pace bowler,1505,1005,70,Right Fast,8.99,72,20.9,13.96,New Zealand
+288284,Josh Hazlewood,RHB,pace bowler,1296,1045,71,Right Fast,7.44,62,20.9,16.85,Australia
+833087,Mahedi Hasan,LHB,spin bowler,1173,1127,106,Right Off Spin,6.24,56,20.95,20.12,Bangladesh
+430246,Yuzvendra Chahal,RHB,spin bowler,4488,3495,230,Right Wrist Spin,7.7,214,20.97,16.33,India
+826915,Nathan Ellis,RHB,pace bowler,2833,2048,126,Right Fast,8.3,135,20.99,15.17,Australia
+240609,Fawad Ahmed,LHB,spin bowler,1155,988,115,Right Wrist Spin,7.01,55,21.0,17.96,Australia
+559235,Kuldeep Yadav,RHB,spin bowler,2059,1640,120,Left Wrist Spin,7.53,98,21.01,16.73,India
+914171,Qais Ahmad,LHB,spin bowler,904,749,94,Right Wrist Spin,7.24,43,21.02,17.42,Afghanistan
+211748,Benny Howell,LHB,pace bowler,989,804,119,Right Medium,7.38,47,21.04,17.11,England
+1151261,Zappy Bimenyimana,RHB,pace bowler,842,729,54,Right Medium,6.93,40,21.05,18.23,Rwanda
+774223,Jhye Richardson,LHB,pace bowler,674,541,73,Right Fast,7.48,32,21.06,16.91,Australia
+227758,Imad Wasim,RHB,spin bowler,4697,4448,293,Left Off Spin,6.34,223,21.06,19.95,Pakistan
+43590,Wahab Riaz,RHB,pace bowler,4823,3710,238,Left Fast,7.8,229,21.06,16.2,Pakistan
+323244,Rahat Ali,RHB,pace bowler,696,525,40,Left Fast,7.95,33,21.09,15.91,Pakistan
+1193548,Tim Pringle,RHB,spin bowler,570,507,32,Left Off Spin,6.75,27,21.11,18.78,Netherlands
+272262,Kane Richardson,LHB,pace bowler,1162,859,118,Right Fast,8.12,55,21.13,15.62,Australia
+826915,Nathan Ellis,LHB,pace bowler,824,679,100,Right Fast,7.28,39,21.13,17.41,Australia
+547766,Jacob Duffy,RHB,pace bowler,1141,865,60,Right Fast,7.91,54,21.13,16.02,New Zealand
+906783,Obed McCoy,LHB,pace bowler,993,697,92,Left Fast,8.55,47,21.13,14.83,West Indies
+328026,Isuru Udana,LHB,pace bowler,930,638,91,Left Fast,8.75,44,21.14,14.5,Sri Lanka
+559235,Kuldeep Yadav,LHB,spin bowler,1269,962,107,Left Wrist Spin,7.91,60,21.15,16.03,India
+530812,Akeal Hosein,RHB,spin bowler,2243,2033,126,Left Off Spin,6.62,106,21.16,19.18,West Indies
+300619,Rubel Hossain,RHB,pace bowler,1759,1326,95,Right Fast,7.96,83,21.19,15.98,Bangladesh
+959833,Wes Agar,RHB,pace bowler,1272,865,55,Right Fast,8.82,60,21.2,14.42,Australia
+755459,Ben Green,RHB,pace bowler,997,656,47,Right Fast,9.12,47,21.21,13.96,England
+7443,Nathan Rimmington,RHB,pace bowler,1400,966,63,Right Fast,8.7,66,21.21,14.64,Australia
+559066,Ish Sodhi,LHB,spin bowler,1761,1310,162,Right Wrist Spin,8.07,83,21.22,15.78,New Zealand
+362710,David Payne,LHB,pace bowler,870,618,98,Left Fast,8.45,41,21.22,15.07,England
+379776,Sisanda Magala,RHB,pace bowler,1677,1304,85,Right Fast,7.72,79,21.23,16.51,South Africa
+1236048,Vasu Saini,RHB,pace bowler,616,528,33,Right Medium,7.0,29,21.24,18.21,Romania
+211855,Liam Dawson,LHB,spin bowler,1084,829,131,Left Off Spin,7.85,51,21.25,16.25,England
+891517,Pat Brown,RHB,pace bowler,1807,1161,77,Right Fast,9.34,85,21.26,13.66,England
+481979,Anrich Nortje,LHB,pace bowler,1106,852,101,Right Fast,7.79,52,21.27,16.38,South Africa
+348034,George Dockrell,RHB,spin bowler,1193,1027,85,Left Off Spin,6.97,56,21.3,18.34,Ireland
+376169,Michael Neser,RHB,pace bowler,1705,1267,89,Right Fast,8.07,80,21.31,15.84,Australia
+698343,Eathan Bosch,RHB,pace bowler,789,642,44,Right Fast,7.37,37,21.32,17.35,South Africa
+787073,Chris Green,LHB,spin bowler,1493,1375,161,Right Off Spin,6.51,70,21.33,19.64,Australia
+1272475,Zaman Khan,RHB,pace bowler,1644,1179,76,Right Fast,8.37,77,21.35,15.31,Pakistan
+697279,Usman Shinwari,RHB,pace bowler,1474,1095,74,Left Fast,8.08,69,21.36,15.87,Pakistan
+807535,Brad Wheal,RHB,pace bowler,1111,798,52,Right Fast,8.35,52,21.37,15.35,Scotland
+1192940,Shiraz Khan,RHB,spin bowler,663,632,37,Right Wrist Spin,6.29,31,21.39,20.39,Kuwait
+230861,Malusi Siboto,RHB,pace bowler,1113,858,59,Right Medium,7.78,52,21.4,16.5,South Africa
+51439,Dwayne Bravo,LHB,pace bowler,2828,2116,251,Right Medium,8.02,132,21.42,16.03,West Indies
+914171,Qais Ahmad,RHB,spin bowler,2228,1755,117,Right Wrist Spin,7.62,104,21.42,16.88,Afghanistan
+827051,Blessing Muzarabani,RHB,pace bowler,1371,1084,76,Right Fast,7.59,64,21.42,16.94,Zimbabwe
+806241,Richard Ngarava,RHB,pace bowler,1395,1128,66,Left Fast,7.42,65,21.46,17.35,Zimbabwe
+681305,Hasan Ali,RHB,pace bowler,3545,2659,169,Right Fast,8.0,165,21.48,16.12,Pakistan
+247235,Chris Woakes,RHB,pace bowler,1569,1153,82,Right Fast,8.16,73,21.49,15.79,England
+1072470,Shaheen Shah Afridi,LHB,pace bowler,1591,1241,149,Left Fast,7.69,74,21.5,16.77,Pakistan
+233904,Yasim Murtaza,RHB,spin bowler,559,608,35,Left Off Spin,5.52,26,21.5,23.38,Hong Kong
+629070,Mohammad Saifuddin,LHB,pace bowler,775,625,82,Right Fast,7.44,36,21.53,17.36,Bangladesh
+540316,Andile Phehlukwayo,RHB,pace bowler,1464,1040,86,Right Fast,8.45,68,21.53,15.29,South Africa
+677077,Romario Shepherd,RHB,pace bowler,1940,1285,105,Right Fast,9.06,90,21.56,14.28,West Indies
+51784,Rayad Emrit,LHB,pace bowler,820,654,79,Right Fast,7.52,38,21.58,17.21,West Indies
+272477,Jason Behrendorff,LHB,pace bowler,971,773,93,Left Fast,7.54,45,21.58,17.18,Australia
+270484,James Faulkner,RHB,pace bowler,2591,1916,135,Left Fast,8.11,120,21.59,15.97,Australia
+311592,Mitchell Starc,RHB,pace bowler,1275,923,65,Left Fast,8.29,59,21.61,15.64,Australia
+272477,Jason Behrendorff,RHB,pace bowler,2205,1753,114,Left Fast,7.55,102,21.62,17.19,Australia
+499594,Kasun Rajitha,RHB,pace bowler,952,695,47,Right Fast,8.22,44,21.64,15.8,Sri Lanka
+670031,Alzarri Joseph,LHB,pace bowler,1061,769,96,Right Fast,8.28,49,21.65,15.69,West Indies
+550215,Kagiso Rabada,RHB,pace bowler,3682,2769,181,Right Fast,7.98,170,21.66,16.29,South Africa
+506612,Matt Henry,LHB,pace bowler,738,510,74,Right Fast,8.68,34,21.71,15.0,New Zealand
+822553,Tushar Deshpande,RHB,pace bowler,1021,647,49,Right Medium,9.47,47,21.72,13.77,India
+1158088,Naseem Shah,LHB,pace bowler,847,646,84,Right Fast,7.87,39,21.72,16.56,Pakistan
+398666,Sean Abbott,LHB,pace bowler,978,687,95,Right Fast,8.54,45,21.73,15.27,Australia
+244497,Adil Rashid,LHB,spin bowler,1327,1074,135,Right Wrist Spin,7.41,61,21.75,17.61,England
+581160,Khary Pierre,RHB,spin bowler,1001,855,58,Left Off Spin,7.02,46,21.76,18.59,West Indies
+670045,Gudakesh Motie,RHB,spin bowler,675,567,35,Left Off Spin,7.14,31,21.77,18.29,West Indies
+1175441,Ravi Bishnoi,LHB,spin bowler,936,774,84,Right Wrist Spin,7.26,43,21.77,18.0,India
+272262,Kane Richardson,RHB,pace bowler,3029,2176,141,Right Fast,8.35,139,21.79,15.65,Australia
+865833,Zak Chappell,RHB,pace bowler,850,529,39,Right Fast,9.64,39,21.79,13.56,England
+261354,Nathan Coulter-Nile,RHB,pace bowler,1984,1516,103,Right Fast,7.85,91,21.8,16.66,Australia
+511532,Al-Amin Hossain,RHB,pace bowler,1809,1283,88,Right Fast,8.46,83,21.8,15.46,Bangladesh
+379504,Adam Zampa,RHB,spin bowler,4537,3726,227,Right Wrist Spin,7.31,208,21.81,17.91,Australia
+42639,Shahid Afridi,RHB,spin bowler,2857,2583,167,Right Wrist Spin,6.64,131,21.81,19.72,Pakistan
+793447,Naveen-ul-Haq,RHB,pace bowler,3230,2282,154,Right Fast,8.49,148,21.82,15.42,Afghanistan
+55894,Farhad Reza,RHB,pace bowler,1179,822,65,Right Fast,8.61,54,21.83,15.22,Bangladesh
+327830,Dwaine Pretorius,RHB,pace bowler,2074,1484,125,Right Fast,8.39,95,21.83,15.62,South Africa
+444135,Sohag Gazi,LHB,spin bowler,590,539,53,Right Off Spin,6.57,27,21.85,19.96,Bangladesh
+974175,Fazalhaq Farooqi,RHB,pace bowler,1289,1052,66,Left Fast,7.35,59,21.85,17.83,Afghanistan
+45949,Rory Kleinveldt,RHB,pace bowler,1291,944,69,Right Fast,8.21,59,21.88,16.0,South Africa
+533561,Waqas Maqsood,RHB,pace bowler,875,644,46,Left Fast,8.15,40,21.88,16.1,Pakistan
+1027781,Matthew Potts,RHB,pace bowler,832,569,38,Right Fast,8.77,38,21.89,14.97,England
+211748,Benny Howell,RHB,pace bowler,3088,2566,160,Right Medium,7.22,141,21.9,18.2,England
+1098186,Grant Stewart,RHB,pace bowler,1161,826,57,Right Fast,8.43,53,21.91,15.58,Italy
+826901,Daniel Sams,RHB,pace bowler,3494,2377,156,Left Fast,8.82,159,21.97,14.95,Australia
+297592,Luke Fletcher,RHB,pace bowler,1187,804,59,Right Fast,8.86,54,21.98,14.89,England
+922943,Shadab Khan,LHB,spin bowler,2177,1742,203,Right Wrist Spin,7.5,99,21.99,17.6,Pakistan
+417381,Andy McBrine,RHB,spin bowler,726,598,43,Right Off Spin,7.28,33,22.0,18.12,Ireland
+629080,Binura Fernando,RHB,pace bowler,682,513,33,Left Fast,7.98,31,22.0,16.55,Sri Lanka
+776695,Matt Critchley,RHB,spin bowler,1761,1397,101,Right Wrist Spin,7.56,80,22.01,17.46,England
+568136,Fareed Ahmad,RHB,pace bowler,794,533,37,Left Fast,8.94,36,22.06,14.81,Afghanistan
+493773,Lockie Ferguson,RHB,pace bowler,2407,1838,121,Right Fast,7.86,109,22.08,16.86,New Zealand
+694211,Avesh Khan,LHB,pace bowler,817,565,75,Right Fast,8.68,37,22.08,15.27,India
+362201,Lewis Gregory,LHB,pace bowler,1016,683,114,Right Fast,8.93,46,22.09,14.85,England
+425639,Tendai Chatara,RHB,pace bowler,1083,895,53,Right Fast,7.26,49,22.1,18.27,Zimbabwe
+230559,Kieron Pollard,RHB,pace bowler,2100,1537,174,Right Medium,8.2,95,22.11,16.18,West Indies
+310107,Danny Briggs,RHB,spin bowler,2413,1997,131,Left Off Spin,7.25,109,22.14,18.32,England
+629070,Mohammad Saifuddin,RHB,pace bowler,1861,1356,93,Right Fast,8.23,84,22.15,16.14,Bangladesh
+931603,Brendan Doggett,RHB,pace bowler,733,550,40,Right Fast,8.0,33,22.21,16.67,Australia
+517542,Paul Coughlin,RHB,pace bowler,1111,685,53,Right Medium,9.73,50,22.22,13.7,England
+439952,Chris Morris,RHB,pace bowler,2978,2210,140,Right Fast,8.09,134,22.22,16.49,South Africa
+230558,Sunil Narine,RHB,spin bowler,5781,5465,353,Right Off Spin,6.35,260,22.23,21.02,West Indies
+928059,Ben White,RHB,spin bowler,867,659,44,Right Wrist Spin,7.89,39,22.23,16.9,Ireland
+1161606,Haris Rauf,RHB,pace bowler,3625,2527,167,Right Fast,8.61,163,22.24,15.5,Pakistan
+549288,Ferisco Adams,RHB,pace bowler,1134,836,60,Right Fast,8.14,51,22.24,16.39,South Africa
+914567,Oshane Thomas,RHB,pace bowler,1426,958,70,Right Fast,8.93,64,22.28,14.97,West Indies
+481896,Mohammed Shami,RHB,pace bowler,2431,1656,114,Right Fast,8.81,109,22.3,15.19,India
+1104703,Fred Klaassen,RHB,pace bowler,2075,1543,98,Left Fast,8.07,93,22.31,16.59,England
+362541,Doug Bracewell,RHB,pace bowler,781,562,42,Right Fast,8.34,35,22.31,16.06,New Zealand
+1099379,Gareth Delany,RHB,spin bowler,1206,979,73,Right Wrist Spin,7.39,54,22.33,18.13,Ireland
+446548,Scott Boland,RHB,pace bowler,1275,923,60,Right Fast,8.29,57,22.37,16.19,Australia
+471202,Brett D'Oliveira,RHB,spin bowler,1387,1135,89,Right Wrist Spin,7.33,62,22.37,18.31,England
+10582,Ravi Bopara,RHB,pace bowler,3157,2484,189,Right Medium,7.63,141,22.39,17.62,England
+56007,Mashrafe Mortaza,RHB,pace bowler,1769,1449,105,Right Fast,7.33,79,22.39,18.34,Bangladesh
+446810,Nazmul Islam,RHB,spin bowler,1120,938,63,Left Off Spin,7.16,50,22.4,18.76,Bangladesh
+538506,Taskin Ahmed,LHB,pace bowler,1216,913,116,Right Fast,7.99,54,22.52,16.91,Bangladesh
+774223,Jhye Richardson,RHB,pace bowler,2005,1473,91,Right Fast,8.17,89,22.53,16.55,Australia
+330902,Mustafizur Rahman,LHB,pace bowler,2164,1653,210,Left Fast,7.85,96,22.54,17.22,Bangladesh
+677077,Romario Shepherd,LHB,pace bowler,992,662,88,Right Fast,8.99,44,22.55,15.05,West Indies
+539548,Scott Kuggeleijn,RHB,pace bowler,1894,1333,95,Right Fast,8.53,84,22.55,15.87,New Zealand
+585463,Godfred Bakiweyem,RHB,pace bowler,564,503,32,Right Medium,6.73,25,22.56,20.12,Ghana
+857979,George Scrimshaw,RHB,pace bowler,1061,716,47,Right Fast,8.89,47,22.57,15.23,England
+542023,Lungi Ngidi,LHB,pace bowler,971,664,86,Right Fast,8.77,43,22.58,15.44,South Africa
+11724,Rikki Clarke,RHB,pace bowler,1018,800,57,Right Fast,7.64,45,22.62,17.78,England
+1143529,Imran Anwar,RHB,pace bowler,792,593,44,Left Medium,8.01,35,22.63,16.94,Bahrain
+232364,Tim Southee,LHB,pace bowler,1381,1042,137,Right Fast,7.95,61,22.64,17.08,New Zealand
+326017,Siddarth Kaul,RHB,pace bowler,1540,1103,69,Right Medium,8.38,68,22.65,16.22,India
+379145,Tabraiz Shamsi,RHB,spin bowler,3533,2846,192,Left Wrist Spin,7.45,156,22.65,18.24,South Africa
+550235,Tom Curran,RHB,pace bowler,3353,2367,152,Right Fast,8.5,148,22.66,15.99,England
+681117,Faheem Ashraf,LHB,pace bowler,1405,1012,139,Right Medium,8.33,62,22.66,16.32,Pakistan
+1328735,Yasin Patel,RHB,spin bowler,544,537,30,Left Off Spin,6.08,24,22.67,22.38,Kuwait
+973799,Janak Prakash,RHB,pace bowler,930,640,38,Right Medium,8.72,41,22.68,15.61,Singapore
+42657,Shoaib Malik,LHB,spin bowler,1316,1163,144,Right Off Spin,6.79,58,22.69,20.05,Pakistan
+259551,Junaid Khan,RHB,pace bowler,1883,1427,92,Left Fast,7.92,83,22.69,17.19,Pakistan
+961713,Riley Meredith,RHB,pace bowler,1885,1358,86,Right Fast,8.33,83,22.71,16.36,Australia
+464626,Craig Overton,RHB,pace bowler,1639,1173,78,Right Fast,8.38,72,22.76,16.29,England
+288284,Josh Hazlewood,LHB,pace bowler,775,598,62,Right Fast,7.78,34,22.79,17.59,Australia
+277912,Trent Boult,LHB,pace bowler,1641,1249,151,Left Fast,7.88,72,22.79,17.35,New Zealand
+208657,Pieter Seelaar,RHB,spin bowler,707,611,45,Left Off Spin,6.94,31,22.81,19.71,Netherlands
+922943,Shadab Khan,RHB,spin bowler,4815,3805,252,Right Wrist Spin,7.59,211,22.82,18.03,Pakistan
+354259,Azeem Rafiq,RHB,spin bowler,708,507,35,Right Off Spin,8.38,31,22.84,16.35,England
+314622,Krishmar Santokie,RHB,pace bowler,1097,807,52,Left Medium,8.16,48,22.85,16.81,West Indies
+495964,Ryan Burl,RHB,spin bowler,960,826,64,Right Wrist Spin,6.97,42,22.86,19.67,Zimbabwe
+41434,Mohammad Hafeez,RHB,spin bowler,849,752,94,Right Off Spin,6.77,37,22.95,20.32,Pakistan
+232364,Tim Southee,RHB,pace bowler,3237,2339,149,Right Fast,8.3,141,22.96,16.59,New Zealand
+298241,Nathan Buck,RHB,pace bowler,782,547,42,Right Fast,8.58,34,23.0,16.09,England
+43654,Yasir Arafat,RHB,pace bowler,805,552,36,Right Fast,8.75,35,23.0,15.77,Pakistan
+364343,Craig Young,RHB,pace bowler,1565,1144,76,Right Fast,8.21,68,23.01,16.82,Ireland
+537119,Mohit Sharma,RHB,pace bowler,1776,1227,91,Right Medium,8.68,77,23.06,15.94,India
+52912,Ravi Rampaul,RHB,pace bowler,1732,1280,86,Right Fast,8.12,75,23.09,17.07,West Indies
+288992,Chris Jordan,RHB,pace bowler,6350,4470,298,Right Fast,8.52,275,23.09,16.25,England
+310525,Chris Wood,LHB,pace bowler,855,584,86,Left Fast,8.78,37,23.11,15.78,England
+297483,Oliver Hannon-Dalby,RHB,pace bowler,1110,756,50,Right Fast,8.81,48,23.12,15.75,England
+459257,Tymal Mills,RHB,pace bowler,3814,2749,165,Left Fast,8.32,165,23.12,16.66,England
+772061,Sam Cook,RHB,pace bowler,1573,1073,66,Right Fast,8.8,68,23.13,15.78,England
+380956,Michael Rippon,RHB,spin bowler,1112,935,62,Left Wrist Spin,7.14,48,23.17,19.48,New Zealand
+1203995,Shahnawaz Dahani,RHB,pace bowler,1020,668,48,Right Fast,9.16,44,23.18,15.18,Pakistan
+559066,Ish Sodhi,RHB,spin bowler,4273,3253,210,Right Wrist Spin,7.88,184,23.22,17.68,New Zealand
+1130463,Arshad Iqbal,RHB,pace bowler,859,609,44,Right Fast,8.46,37,23.22,16.46,Pakistan
+244497,Adil Rashid,RHB,spin bowler,3809,3069,187,Right Wrist Spin,7.45,164,23.23,18.71,England
+475281,Shardul Thakur,LHB,pace bowler,1256,870,107,Right Medium,8.66,54,23.26,16.11,India
+1246528,Umran Malik,RHB,pace bowler,815,524,41,Right Fast,9.33,35,23.29,14.97,India
+789729,Callum Parkinson,RHB,spin bowler,1793,1530,96,Left Off Spin,7.03,77,23.29,19.87,England
+1077307,Kaleemullah,RHB,pace bowler,629,545,35,Right Medium,6.92,27,23.3,20.19,Oman
+1125976,Arshdeep Singh,RHB,pace bowler,2493,1752,123,Left Fast,8.54,107,23.3,16.37,India
+1026379,Henry Brookes,RHB,pace bowler,1027,680,49,Right Fast,9.06,44,23.34,15.45,England
+375126,Hardus Viljoen,RHB,pace bowler,2125,1437,99,Right Fast,8.87,91,23.35,15.79,South Africa
+473191,Richard Gleeson,RHB,pace bowler,1684,1277,88,Right Fast,7.91,72,23.39,17.74,England
+44956,Grant Elliott,RHB,pace bowler,1123,858,64,Right Medium,7.85,48,23.4,17.88,New Zealand
+1108375,Varun Chakravarthy,LHB,spin bowler,703,561,70,Right Wrist Spin,7.52,30,23.43,18.7,India
+1123718,Spencer Johnson,RHB,pace bowler,728,561,37,Left Fast,7.79,31,23.48,18.1,Australia
+53191,Jerome Taylor,RHB,pace bowler,1668,1120,69,Right Fast,8.94,71,23.49,15.77,West Indies
+56025,Mahmudullah,LHB,spin bowler,987,811,101,Right Off Spin,7.3,42,23.5,19.31,Bangladesh
+793447,Naveen-ul-Haq,LHB,pace bowler,1411,1019,131,Right Fast,8.31,60,23.52,16.98,Afghanistan
+429122,Umaid Asif,RHB,pace bowler,1576,1169,74,Right Fast,8.09,67,23.52,17.45,Pakistan
+679567,Ben Dwarshuis,RHB,pace bowler,2565,1827,113,Left Fast,8.42,109,23.53,16.76,Australia
+459761,Ben Raine,RHB,pace bowler,1719,1179,87,Right Fast,8.75,73,23.55,16.15,England
+240609,Fawad Ahmed,RHB,spin bowler,2780,2411,153,Right Wrist Spin,6.92,118,23.56,20.43,Australia
+573170,Luke Wood,LHB,pace bowler,1132,825,109,Left Fast,8.23,48,23.58,17.19,England
+974109,Mujeeb Ur Rahman,RHB,spin bowler,3776,3325,209,Right Off Spin,6.81,160,23.6,20.78,Afghanistan
+310525,Chris Wood,RHB,pace bowler,2245,1669,109,Left Fast,8.07,95,23.63,17.57,England
+712219,Zahir Khan,RHB,spin bowler,1276,1035,71,Left Wrist Spin,7.4,54,23.63,19.17,Afghanistan
+297583,Kyle Abbott,RHB,pace bowler,2082,1421,92,Right Fast,8.79,88,23.66,16.15,South Africa
+265564,Wayne Parnell,RHB,pace bowler,3501,2422,156,Left Fast,8.67,148,23.66,16.36,South Africa
+820691,Odean Smith,RHB,pace bowler,1656,994,85,Right Fast,10.0,70,23.66,14.2,West Indies
+922947,Sameen Gul,RHB,pace bowler,757,526,35,Right Medium,8.63,32,23.66,16.44,Pakistan
+633638,Sharvin Muniandy,RHB,pace bowler,900,599,43,Right Medium,9.02,38,23.68,15.76,Malaysia
+457279,Olly Stone,RHB,pace bowler,1232,871,61,Right Fast,8.49,52,23.69,16.75,England
+448243,Rumman Raees,RHB,pace bowler,1686,1304,91,Left Fast,7.76,71,23.75,18.37,Pakistan
+747315,Nathan Sowter,RHB,spin bowler,2067,1626,105,Right Wrist Spin,7.63,87,23.76,18.69,England
+595921,Curtis Campher,RHB,pace bowler,1141,779,63,Right Fast,8.79,48,23.77,16.23,Ireland
+43265,Sohail Tanvir,LHB,pace bowler,1640,1306,160,Left Fast,7.53,69,23.77,18.93,Pakistan
+228622,John Hastings,RHB,pace bowler,1071,771,51,Right Fast,8.33,45,23.8,17.13,Australia
+348109,Paul van Meekeren,RHB,pace bowler,1642,1293,86,Right Fast,7.62,69,23.8,18.74,Netherlands
+669855,Jofra Archer,RHB,pace bowler,2643,2057,131,Right Fast,7.71,111,23.81,18.53,England
+430246,Yuzvendra Chahal,LHB,spin bowler,2311,1623,194,Right Wrist Spin,8.54,97,23.82,16.73,India
+450101,Raymon Reifer,RHB,pace bowler,858,572,51,Left Fast,9.0,36,23.83,15.89,West Indies
+308251,David Willey,RHB,pace bowler,3933,2908,201,Left Fast,8.11,165,23.84,17.62,England
+355269,James Neesham,LHB,pace bowler,1169,787,124,Right Fast,8.91,49,23.86,16.06,New Zealand
+716733,Khushdil Shah,RHB,spin bowler,740,622,52,Left Off Spin,7.14,31,23.87,20.06,Pakistan
+328026,Isuru Udana,RHB,pace bowler,2078,1503,108,Left Fast,8.3,87,23.89,17.28,Sri Lanka
+827051,Blessing Muzarabani,LHB,pace bowler,694,558,64,Right Fast,7.46,29,23.93,19.24,Zimbabwe
+571703,Wellington Masakadza,RHB,spin bowler,887,773,56,Left Off Spin,6.88,37,23.97,20.89,Zimbabwe
+909225,Paul Walter,RHB,pace bowler,1513,1021,92,Left Medium,8.89,63,24.02,16.21,England
+819429,Azmatullah Omarzai,RHB,pace bowler,1105,817,64,Right Fast,8.12,46,24.02,17.76,Afghanistan
+56058,Nabil Samad,RHB,spin bowler,529,510,32,Left Off Spin,6.22,22,24.05,23.18,Bangladesh
+437438,Prenelan Subrayen,RHB,spin bowler,794,723,54,Right Off Spin,6.59,33,24.06,21.91,South Africa
+230558,Sunil Narine,LHB,spin bowler,2893,2692,307,Right Off Spin,6.45,120,24.11,22.43,West Indies
+1158100,Mohammad Hasnain,RHB,pace bowler,2054,1419,100,Right Fast,8.68,85,24.16,16.69,Pakistan
+393289,Shaun von Berg,RHB,spin bowler,773,634,39,Right Wrist Spin,7.32,32,24.16,19.81,South Africa
+12454,Joe Denly,RHB,spin bowler,918,704,63,Right Wrist Spin,7.82,38,24.16,18.53,England
+443263,Hayden Walsh,RHB,spin bowler,1281,959,67,Right Wrist Spin,8.01,53,24.17,18.09,West Indies
+1108375,Varun Chakravarthy,RHB,spin bowler,1499,1229,77,Right Wrist Spin,7.32,62,24.18,19.82,India
+1159371,Mohammad Ilyas,RHB,pace bowler,750,503,39,Right Fast,8.95,31,24.19,16.23,Pakistan
+429981,Mohammad Irfan,RHB,pace bowler,2009,1747,107,Left Fast,6.9,83,24.2,21.05,Pakistan
+942645,Khaleel Ahmed,RHB,pace bowler,1744,1258,82,Left Medium,8.32,72,24.22,17.47,India
+24599,Boyd Rankin,RHB,pace bowler,1187,893,57,Right Fast,7.98,49,24.22,18.22,Ireland
+379927,Beuran Hendricks,RHB,pace bowler,1163,808,55,Left Fast,8.64,48,24.23,16.83,South Africa
+457249,Carlos Brathwaite,RHB,pace bowler,3855,2793,212,Right Fast,8.28,159,24.25,17.57,West Indies
+554691,Axar Patel,RHB,spin bowler,3080,2705,182,Left Off Spin,6.83,127,24.25,21.3,India
+520551,Arron Lilley,RHB,spin bowler,777,619,62,Right Off Spin,7.53,32,24.28,19.34,England
+438362,Sandeep Sharma,RHB,pace bowler,2161,1644,114,Right Medium,7.89,89,24.28,18.47,India
+495551,Sheldon Cottrell,RHB,pace bowler,2235,1586,108,Left Fast,8.46,92,24.29,17.24,West Indies
+1138316,Maheesh Theekshana,LHB,spin bowler,851,789,97,Right Off Spin,6.47,35,24.31,22.54,Sri Lanka
+802575,T Natarajan,LHB,pace bowler,852,578,64,Left Medium,8.84,35,24.34,16.51,India
+26421,Ravichandran Ashwin,LHB,spin bowler,1608,1451,142,Right Off Spin,6.65,66,24.36,21.98,India
+826901,Daniel Sams,LHB,pace bowler,1243,856,125,Left Fast,8.71,51,24.37,16.78,Australia
+512907,Tom Helm,RHB,pace bowler,1901,1280,80,Right Fast,8.91,78,24.37,16.41,England
+18632,Samit Patel,RHB,spin bowler,3777,3194,217,Left Off Spin,7.1,155,24.37,20.61,England
+506612,Matt Henry,RHB,pace bowler,1926,1295,82,Right Fast,8.92,79,24.38,16.39,New Zealand
+917159,Prasidh Krishna,RHB,pace bowler,1439,998,65,Right Fast,8.65,59,24.39,16.92,India
+39028,Ashar Zaidi,RHB,spin bowler,659,568,40,Left Off Spin,6.96,27,24.41,21.04,Pakistan
+1081442,Mayank Markande,RHB,spin bowler,1050,767,58,Right Wrist Spin,8.21,43,24.42,17.84,India
+55870,Sean Williams,RHB,spin bowler,1101,971,75,Left Off Spin,6.8,45,24.47,21.58,Zimbabwe
+629063,Mehidy Hasan Miraz,LHB,spin bowler,1151,992,96,Right Off Spin,6.96,47,24.49,21.11,Bangladesh
+540316,Andile Phehlukwayo,LHB,pace bowler,735,508,69,Right Fast,8.68,30,24.5,16.93,South Africa
+32966,Piyush Chawla,RHB,spin bowler,1937,1430,102,Right Wrist Spin,8.13,79,24.52,18.1,India
+927619,Khaled Ahmed,RHB,pace bowler,711,508,37,Right Medium,8.4,29,24.52,17.52,Bangladesh
+784379,Wanindu Hasaranga de Silva,LHB,spin bowler,883,675,89,Right Wrist Spin,7.85,36,24.53,18.75,Sri Lanka
+698189,Wiaan Mulder,RHB,pace bowler,859,565,54,Right Medium,9.12,35,24.54,16.14,South Africa
+1175441,Ravi Bishnoi,RHB,spin bowler,1942,1527,102,Right Wrist Spin,7.63,79,24.58,19.33,India
+301648,Jordan Clark,RHB,pace bowler,1082,747,64,Right Fast,8.69,44,24.59,16.98,England
+46538,Morne Morkel,RHB,pace bowler,1133,830,51,Right Fast,8.19,46,24.63,18.04,South Africa
+766809,Jordan Thompson,RHB,pace bowler,1923,1190,81,Right Fast,9.7,78,24.65,15.26,England
+660889,Mason Crane,RHB,spin bowler,1627,1242,79,Right Wrist Spin,7.86,66,24.65,18.82,England
+339095,Dieter Klein,RHB,pace bowler,839,722,42,Left Fast,6.97,34,24.68,21.24,Germany
+639080,Matthew Fisher,RHB,pace bowler,914,604,41,Right Fast,9.08,37,24.7,16.32,England
+670031,Alzarri Joseph,RHB,pace bowler,2075,1451,100,Right Fast,8.58,84,24.7,17.27,West Indies
+41984,Mohammad Nadeem,RHB,pace bowler,791,631,47,Right Fast,7.52,32,24.72,19.72,Oman
+530773,Pawan Negi,RHB,spin bowler,717,565,42,Left Off Spin,7.61,29,24.72,19.48,India
+325012,Marcus Stoinis,LHB,pace bowler,1163,765,118,Right Medium,9.12,47,24.74,16.28,Australia
+44394,Gareth Berg,RHB,pace bowler,891,668,48,Right Medium,8.0,36,24.75,18.56,Italy
+391485,Jason Holder,RHB,pace bowler,3714,2594,187,Right Fast,8.59,150,24.76,17.29,West Indies
+647667,Usama Mir,RHB,spin bowler,1982,1445,91,Right Wrist Spin,8.23,80,24.78,18.06,Pakistan
+414990,Jake Ball,LHB,pace bowler,818,557,81,Right Fast,8.81,33,24.79,16.88,England
+926851,Mukesh Kumar,RHB,pace bowler,818,547,41,Right Medium,8.97,33,24.79,16.58,India
+376169,Michael Neser,LHB,pace bowler,744,529,72,Right Fast,8.44,30,24.8,17.63,Australia
+502714,Mitchell Santner,RHB,spin bowler,3201,2824,172,Left Off Spin,6.8,129,24.81,21.89,New Zealand
+698143,Lutho Sipamla,RHB,pace bowler,894,588,43,Right Fast,9.12,36,24.83,16.33,South Africa
+436749,Fayyaz Butt,RHB,pace bowler,920,716,46,Right Fast,7.71,37,24.86,19.35,Oman
+556684,Mir Hamza,RHB,pace bowler,870,609,39,Left Medium,8.57,35,24.86,17.4,Pakistan
+234675,Ravindra Jadeja,RHB,spin bowler,2737,2378,177,Left Off Spin,6.91,110,24.88,21.62,India
+221140,David Wiese,RHB,pace bowler,4478,3229,251,Right Fast,8.32,180,24.88,17.94,Namibia
+541224,Luke Jongwe,RHB,pace bowler,1045,763,58,Right Fast,8.22,42,24.88,18.17,Zimbabwe
+43265,Sohail Tanvir,RHB,pace bowler,3585,2865,188,Left Fast,7.51,144,24.9,19.9,Pakistan
+41434,Mohammad Hafeez,LHB,spin bowler,822,716,91,Right Off Spin,6.89,33,24.91,21.7,Pakistan
+8180,Shane Watson,RHB,pace bowler,2020,1466,111,Right Fast,8.27,81,24.94,18.1,Australia
+573170,Luke Wood,RHB,pace bowler,2621,1867,131,Left Fast,8.42,105,24.96,17.78,England
+319439,Mitchell McClenaghan,LHB,pace bowler,1423,971,121,Left Fast,8.79,57,24.96,17.04,New Zealand
+511532,Al-Amin Hossain,LHB,pace bowler,824,602,80,Right Fast,8.21,33,24.97,18.24,Bangladesh
+403902,Liam Livingstone,RHB,spin bowler,1875,1344,123,Right Wrist Spin,8.37,75,25.0,17.92,England
+555853,Mark Steketee,RHB,pace bowler,1350,848,61,Right Fast,9.55,54,25.0,15.7,Australia
+550215,Kagiso Rabada,LHB,pace bowler,1877,1306,161,Right Fast,8.62,75,25.03,17.41,South Africa
+49758,Lasith Malinga,RHB,pace bowler,1927,1337,81,Right Fast,8.65,77,25.03,17.36,Sri Lanka
+570241,Mattie McKiernan,RHB,spin bowler,676,519,38,Right Wrist Spin,7.82,27,25.04,19.22,England
+481875,George Linde,LHB,spin bowler,903,629,94,Left Off Spin,8.61,36,25.08,17.47,South Africa
+628240,Hussain Talat,RHB,pace bowler,828,543,57,Right Fast,9.15,33,25.09,16.45,Pakistan
+625960,Kyle Jamieson,RHB,pace bowler,1104,805,58,Right Fast,8.23,44,25.09,18.3,New Zealand
+572199,Ryan Higgins,RHB,pace bowler,1581,1040,83,Right Fast,9.12,63,25.1,16.51,England
+317252,Sohail Khan,RHB,pace bowler,1683,1208,77,Right Fast,8.36,67,25.12,18.03,Pakistan
+352048,Gulbadin Naib,RHB,pace bowler,805,637,52,Right Fast,7.58,32,25.16,19.91,Afghanistan
+325012,Marcus Stoinis,RHB,pace bowler,2189,1475,151,Right Medium,8.9,87,25.16,16.95,Australia
+247235,Chris Woakes,LHB,pace bowler,705,511,65,Right Fast,8.28,28,25.18,18.25,England
+297581,Max Waller,RHB,spin bowler,1563,1286,84,Right Wrist Spin,7.29,62,25.21,20.74,England
+299572,Sikandar Raza,RHB,spin bowler,1946,1543,155,Right Off Spin,7.57,77,25.27,20.04,Zimbabwe
+233514,Thisara Perera,RHB,pace bowler,3238,2111,172,Right Fast,9.2,128,25.3,16.49,Sri Lanka
+402245,Amir Hamza,RHB,spin bowler,582,554,36,Left Off Spin,6.3,23,25.3,24.09,Afghanistan
+489889,Pat Cummins,LHB,pace bowler,987,753,87,Right Fast,7.86,39,25.31,19.31,Australia
+447261,Deepak Chahar,RHB,pace bowler,1849,1402,106,Right Medium,7.91,73,25.33,19.21,India
+440522,Logan van Beek,RHB,pace bowler,2031,1461,100,Right Fast,8.34,80,25.39,18.26,Netherlands
+375126,Hardus Viljoen,LHB,pace bowler,889,665,83,Right Fast,8.02,35,25.4,19.0,South Africa
+244639,Harry Gurney,LHB,pace bowler,839,590,79,Left Fast,8.53,33,25.42,17.88,England
+47492,Dale Steyn,LHB,pace bowler,662,503,62,Right Fast,7.9,26,25.46,19.35,South Africa
+694211,Avesh Khan,RHB,pace bowler,1910,1314,88,Right Fast,8.72,75,25.47,17.52,India
+315623,Ben Laughlin,RHB,pace bowler,1911,1318,87,Right Fast,8.7,75,25.48,17.57,Australia
+557298,Daniel Worrall,RHB,pace bowler,1453,1082,75,Right Fast,8.06,57,25.49,18.98,Australia
+355269,James Neesham,RHB,pace bowler,3110,1993,161,Right Fast,9.36,122,25.49,16.34,New Zealand
+277912,Trent Boult,RHB,pace bowler,3723,2688,174,Left Fast,8.31,146,25.5,18.41,New Zealand
+5961,Moises Henriques,RHB,pace bowler,1071,820,73,Right Fast,7.84,42,25.5,19.52,Australia
+51784,Rayad Emrit,RHB,pace bowler,1712,1295,91,Right Fast,7.93,67,25.55,19.33,West Indies
+347661,Luis Reece,RHB,pace bowler,690,510,54,Left Medium,8.12,27,25.56,18.89,England
+429897,Mathew Pillans,RHB,pace bowler,870,577,35,Right Fast,9.05,34,25.59,16.97,South Africa
+1150772,Tom Hartley,RHB,spin bowler,1177,925,71,Left Off Spin,7.63,46,25.59,20.11,England
+429981,Mohammad Irfan,LHB,pace bowler,819,740,91,Left Fast,6.64,32,25.59,23.12,Pakistan
+1185538,Mohammad Wasim,RHB,pace bowler,1488,988,72,Right Fast,9.04,58,25.66,17.03,Pakistan
+43871,Zulfiqar Babar,RHB,spin bowler,616,559,34,Left Off Spin,6.61,24,25.67,23.29,Pakistan
+51433,Samuel Badree,RHB,spin bowler,1541,1356,93,Right Wrist Spin,6.82,60,25.68,22.6,West Indies
+926629,Hasan Mahmud,RHB,pace bowler,1130,789,58,Right Medium,8.59,44,25.68,17.93,Bangladesh
+348152,Usman Qadir,RHB,spin bowler,1491,1093,73,Right Wrist Spin,8.18,58,25.71,18.84,Pakistan
+215058,Stephen Parry,RHB,spin bowler,1029,818,50,Left Off Spin,7.55,40,25.72,20.45,England
+1138316,Maheesh Theekshana,RHB,spin bowler,2007,1672,105,Right Off Spin,7.2,78,25.73,21.44,Sri Lanka
+8917,Moeen Ali,RHB,spin bowler,2394,1718,186,Right Off Spin,8.36,93,25.74,18.47,England
+928067,Josh Little,LHB,pace bowler,903,690,99,Left Fast,7.85,35,25.8,19.71,Ireland
+677081,Keemo Paul,RHB,pace bowler,1601,1064,91,Right Fast,9.03,62,25.82,17.16,West Indies
+31107,Amit Mishra,RHB,spin bowler,1524,1207,83,Right Wrist Spin,7.58,59,25.83,20.46,India
+5681,Brad Hogg,RHB,spin bowler,801,664,41,Left Wrist Spin,7.24,31,25.84,21.42,Australia
+390484,Jaydev Unadkat,LHB,pace bowler,879,602,77,Left Medium,8.76,34,25.85,17.71,India
+631545,Matthew Carter,LHB,spin bowler,672,554,57,Right Off Spin,7.28,26,25.85,21.31,England
+1163855,Hayden Kerr,RHB,pace bowler,1138,767,53,Left Fast,8.9,44,25.86,17.43,Australia
+1005257,Simi Singh,RHB,spin bowler,1138,844,67,Right Off Spin,8.09,44,25.86,19.18,Ireland
+914623,Liam Trevaskis,RHB,spin bowler,1216,986,60,Left Off Spin,7.4,47,25.87,20.98,England
+375724,Kamrul Islam,RHB,pace bowler,983,635,54,Right Fast,9.29,38,25.87,16.71,Bangladesh
+297482,Ben Sanderson,RHB,pace bowler,1475,998,70,Right Fast,8.87,57,25.88,17.51,England
+319439,Mitchell McClenaghan,RHB,pace bowler,3060,2125,139,Left Fast,8.64,118,25.93,18.01,New Zealand
+457249,Carlos Brathwaite,LHB,pace bowler,1816,1231,169,Right Fast,8.85,70,25.94,17.59,West Indies
+348154,Zafar Gohar,RHB,spin bowler,987,783,51,Left Off Spin,7.56,38,25.97,20.61,Pakistan
+505120,Ashton Agar,LHB,spin bowler,909,704,92,Left Off Spin,7.75,35,25.97,20.11,Australia
+211855,Liam Dawson,RHB,spin bowler,3195,2695,177,Left Off Spin,7.11,123,25.98,21.91,England
+1158100,Mohammad Hasnain,LHB,pace bowler,1143,806,92,Right Fast,8.51,44,25.98,18.32,Pakistan
+481896,Mohammed Shami,LHB,pace bowler,1119,851,96,Right Fast,7.89,43,26.02,19.79,India
+1263691,Rehan Ahmed,RHB,spin bowler,963,725,46,Right Wrist Spin,7.97,37,26.03,19.59,England
+1079848,Shivam Mavi,RHB,pace bowler,834,568,40,Right Fast,8.81,32,26.06,17.75,India
+1064812,Rahul Chahar,LHB,spin bowler,834,680,76,Right Wrist Spin,7.36,32,26.06,21.25,India
+1172124,Sarfaraz Ali,RHB,pace bowler,600,517,36,Right Medium,6.96,23,26.09,22.48,Bahrain
+327947,Dane Paterson,RHB,pace bowler,1410,987,66,Right Fast,8.57,54,26.11,18.28,South Africa
+288305,Shafiul Islam,RHB,pace bowler,1361,933,67,Right Fast,8.75,52,26.17,17.94,Bangladesh
+272385,Josh Lalor,RHB,pace bowler,1232,834,56,Left Fast,8.86,47,26.21,17.74,Australia
+505120,Ashton Agar,RHB,spin bowler,2229,1940,124,Left Off Spin,6.89,85,26.22,22.82,Australia
+317252,Sohail Khan,LHB,pace bowler,735,542,68,Right Fast,8.14,28,26.25,19.36,Pakistan
+802575,T Natarajan,RHB,pace bowler,1392,958,69,Left Medium,8.72,53,26.26,18.08,India
+348049,Nasum Ahmed,RHB,spin bowler,1261,1165,82,Left Off Spin,6.49,48,26.27,24.27,Bangladesh
+559065,Matt Quinn,RHB,pace bowler,1026,683,47,Right Fast,9.01,39,26.31,17.51,New Zealand
+25913,Mohammad Nabi,RHB,spin bowler,4264,3466,275,Right Off Spin,7.38,162,26.32,21.4,Afghanistan
+451782,James Fuller,RHB,pace bowler,2159,1459,106,Right Fast,8.88,82,26.33,17.79,England
+9042,Gareth Batty,RHB,spin bowler,1370,1137,79,Right Off Spin,7.23,52,26.35,21.87,England
+17986,Steven Mullaney,RHB,pace bowler,1556,1210,101,Right Medium,7.72,59,26.37,20.51,England
+707183,Peter Younghusband,RHB,spin bowler,633,538,38,Right Wrist Spin,7.06,24,26.38,22.42,New Zealand
+316909,Basheeru-Deen Walters,RHB,pace bowler,607,521,30,Right Fast,6.99,23,26.39,22.65,South Africa
+662973,Sam Curran,LHB,pace bowler,1664,1219,174,Left Fast,8.19,63,26.41,19.35,England
+434429,Aamer Yamin,RHB,pace bowler,1454,1030,80,Right Medium,8.47,55,26.44,18.73,Pakistan
+552152,Dushmantha Chameera,RHB,pace bowler,1697,1279,88,Right Fast,7.96,64,26.52,19.98,Sri Lanka
+681117,Faheem Ashraf,RHB,pace bowler,3183,2363,168,Right Medium,8.08,120,26.52,19.69,Pakistan
+8076,Shaun Tait,RHB,pace bowler,1062,752,47,Right Fast,8.47,40,26.55,18.8,Australia
+550133,Mosaddek Hossain,LHB,spin bowler,717,575,72,Right Off Spin,7.48,27,26.56,21.3,Bangladesh
+344580,Shreyas Gopal,RHB,spin bowler,983,722,54,Right Wrist Spin,8.17,37,26.57,19.51,India
+45949,Rory Kleinveldt,LHB,pace bowler,638,507,60,Right Fast,7.55,24,26.58,21.12,South Africa
+6033,Mitchell Johnson,RHB,pace bowler,851,700,42,Left Fast,7.29,32,26.59,21.88,Australia
+451782,James Fuller,LHB,pace bowler,745,520,78,Right Fast,8.6,28,26.61,18.57,England
+51433,Samuel Badree,LHB,spin bowler,772,606,67,Right Wrist Spin,7.64,29,26.62,20.9,West Indies
+637158,Imran Qayyum,RHB,spin bowler,879,658,41,Left Off Spin,8.02,33,26.64,19.94,England
+659081,Mark Watt,RHB,spin bowler,2025,1620,99,Left Off Spin,7.5,76,26.64,21.32,Scotland
+267724,Keshav Maharaj,RHB,spin bowler,1732,1590,97,Left Off Spin,6.54,65,26.65,24.46,South Africa
+29264,Harbhajan Singh,LHB,spin bowler,721,631,63,Right Off Spin,6.86,27,26.7,23.37,India
+429738,Lakshan Sandakan,RHB,spin bowler,802,625,43,Left Wrist Spin,7.7,30,26.73,20.83,Sri Lanka
+326625,Cameron Boyce,RHB,spin bowler,1632,1330,81,Right Wrist Spin,7.36,61,26.75,21.8,Australia
+662973,Sam Curran,RHB,pace bowler,4551,3039,214,Left Fast,8.99,170,26.77,17.88,England
+527776,Ollie Robinson,RHB,pace bowler,830,562,39,Right Fast,8.86,31,26.77,18.13,England
+781705,Salman Irshad,RHB,pace bowler,1179,759,50,Right Fast,9.32,44,26.8,17.25,Pakistan
+1064812,Rahul Chahar,RHB,spin bowler,1716,1328,91,Right Wrist Spin,7.75,64,26.81,20.75,India
+393279,Marchant de Lange,RHB,pace bowler,2039,1378,91,Right Fast,8.88,76,26.83,18.13,South Africa
+19264,Liam Plunkett,RHB,pace bowler,1666,1215,82,Right Fast,8.23,62,26.87,19.6,United States of America
+625371,Hardik Pandya,LHB,pace bowler,1344,987,142,Right Fast,8.17,50,26.88,19.74,India
+401057,Taijul Islam,RHB,spin bowler,1022,903,65,Left Off Spin,6.79,38,26.89,23.76,Bangladesh
+605683,Migael Pretorius,RHB,pace bowler,1373,886,62,Right Fast,9.3,51,26.92,17.37,South Africa
+230371,Ben Cutting,LHB,pace bowler,943,629,97,Right Fast,9.0,35,26.94,17.97,Australia
+18632,Samit Patel,LHB,spin bowler,1538,1164,172,Left Off Spin,7.93,57,26.98,20.42,England
+325026,Glenn Maxwell,LHB,spin bowler,1944,1530,192,Right Off Spin,7.62,72,27.0,21.25,Australia
+1094569,Dillon Pennington,RHB,pace bowler,946,647,53,Right Fast,8.77,35,27.03,18.49,England
+594335,Kerwin Mungroo,RHB,pace bowler,731,566,37,Right Fast,7.75,27,27.07,20.96,South Africa
+906749,Dominic Drakes,RHB,pace bowler,1218,804,57,Left Fast,9.09,45,27.07,17.87,West Indies
+280490,JJ Smuts,RHB,spin bowler,1573,1346,96,Left Off Spin,7.01,58,27.12,23.21,South Africa
+390484,Jaydev Unadkat,RHB,pace bowler,2035,1331,90,Left Medium,9.17,75,27.13,17.75,India
+12461,Jade Dernbach,RHB,pace bowler,1331,957,58,Right Fast,8.34,49,27.16,19.53,England
+949561,Dan Moriarty,RHB,spin bowler,679,547,33,Left Off Spin,7.45,25,27.16,21.88,England
+514770,Prakash Mishra,RHB,pace bowler,762,581,33,Right Medium,7.87,28,27.21,20.75,Bulgaria
+8180,Shane Watson,LHB,pace bowler,1007,677,91,Right Fast,8.92,37,27.22,18.3,Australia
+940973,Mohammed Siraj,LHB,pace bowler,1199,837,95,Right Fast,8.59,44,27.25,19.02,India
+712219,Zahir Khan,LHB,spin bowler,573,512,58,Left Wrist Spin,6.71,21,27.29,24.38,Afghanistan
+348148,Mohammad Nawaz,RHB,spin bowler,3578,2933,201,Left Off Spin,7.32,131,27.31,22.39,Pakistan
+514612,Gavin Griffiths,RHB,pace bowler,1093,724,55,Right Fast,9.06,40,27.32,18.1,England
+288992,Chris Jordan,LHB,pace bowler,2573,1804,250,Right Fast,8.56,94,27.37,19.19,England
+1158088,Naseem Shah,RHB,pace bowler,1974,1552,97,Right Fast,7.63,72,27.42,21.56,Pakistan
+1094992,Prem Sisodiya,RHB,spin bowler,823,619,40,Left Off Spin,7.98,30,27.43,20.63,England
+327830,Dwaine Pretorius,LHB,pace bowler,1153,799,104,Right Fast,8.66,42,27.45,19.02,South Africa
+450860,Adam Milne,LHB,pace bowler,879,680,94,Right Fast,7.76,32,27.47,21.25,New Zealand
+4864,Dan Christian,LHB,pace bowler,1539,1078,158,Right Fast,8.57,56,27.48,19.25,Australia
+1185538,Mohammad Wasim,LHB,pace bowler,770,521,60,Right Fast,8.87,28,27.5,18.61,Pakistan
+53115,Daren Sammy,RHB,pace bowler,991,710,81,Right Medium,8.37,36,27.53,19.72,West Indies
+391832,Roston Chase,RHB,spin bowler,634,524,53,Right Off Spin,7.26,23,27.57,22.78,West Indies
+276298,Andre Russell,LHB,pace bowler,2729,1756,257,Right Fast,9.32,99,27.57,17.74,West Indies
+379144,Graham Hume,RHB,pace bowler,772,550,34,Right Fast,8.42,28,27.57,19.64,Ireland
+348059,Barry McCarthy,RHB,pace bowler,1710,1141,74,Right Fast,8.99,62,27.58,18.4,Ireland
+833087,Mahedi Hasan,RHB,spin bowler,1495,1157,114,Right Off Spin,7.75,54,27.69,21.43,Bangladesh
+4864,Dan Christian,RHB,pace bowler,3185,2189,200,Right Fast,8.73,115,27.7,19.03,Australia
+1195245,Vinoth Baskaran,RHB,spin bowler,582,505,33,Left Off Spin,6.91,21,27.71,24.05,Singapore
+322810,Cameron Delport,RHB,pace bowler,1081,785,75,Right Medium,8.26,39,27.72,20.13,South Africa
+637151,Danny Lamb,RHB,pace bowler,889,602,48,Right Medium,8.86,32,27.78,18.81,England
+631545,Matthew Carter,RHB,spin bowler,1029,776,66,Right Off Spin,7.96,37,27.81,20.97,England
+1096123,Luke Hollman,RHB,spin bowler,892,620,42,Right Wrist Spin,8.63,32,27.88,19.38,England
+590326,Mitchell Swepson,RHB,spin bowler,1506,1184,79,Right Wrist Spin,7.63,54,27.89,21.93,Australia
+961713,Riley Meredith,LHB,pace bowler,809,565,72,Right Fast,8.59,29,27.9,19.48,Australia
+348148,Mohammad Nawaz,LHB,spin bowler,1341,949,145,Left Off Spin,8.48,48,27.94,19.77,Pakistan
+226493,Hamish Bennett,RHB,pace bowler,1091,754,48,Right Fast,8.68,39,27.97,19.33,New Zealand
+1191384,Peter Hatzoglou,RHB,spin bowler,1175,903,54,Right Wrist Spin,7.81,42,27.98,21.5,Australia
+550137,Abu Hider,RHB,pace bowler,1345,988,75,Left Fast,8.17,48,28.02,20.58,Bangladesh
+45705,Colin Ingram,RHB,spin bowler,869,682,53,Right Wrist Spin,7.65,31,28.03,22.0,South Africa
+820691,Odean Smith,LHB,pace bowler,785,521,75,Right Fast,9.04,28,28.04,18.61,West Indies
+793467,Karim Janat,RHB,pace bowler,1235,973,80,Right Medium,7.62,44,28.07,22.11,Afghanistan
+942645,Khaleel Ahmed,LHB,pace bowler,927,594,75,Left Medium,9.36,33,28.09,18.0,India
+391485,Jason Holder,LHB,pace bowler,1912,1429,163,Right Fast,8.03,68,28.12,21.01,West Indies
+277955,Dhawal Kulkarni,RHB,pace bowler,1125,822,63,Right Medium,8.21,40,28.12,20.55,India
+519544,Tom Taylor,RHB,pace bowler,902,594,43,Right Fast,9.11,32,28.19,18.56,England
+499660,Gurinder Sandhu,RHB,pace bowler,1043,715,56,Right Fast,8.75,37,28.19,19.32,Australia
+510530,Jamie Overton,RHB,pace bowler,1974,1311,94,Right Fast,9.03,70,28.2,18.73,England
+530812,Akeal Hosein,LHB,spin bowler,875,695,102,Left Off Spin,7.55,31,28.23,22.42,West Indies
+31872,Shahbaz Nadeem,RHB,spin bowler,706,547,39,Left Off Spin,7.74,25,28.24,21.88,India
+10582,Ravi Bopara,LHB,pace bowler,960,799,125,Right Medium,7.21,34,28.24,23.5,England
+437316,Dasun Shanaka,RHB,pace bowler,904,616,82,Right Medium,8.81,32,28.25,19.25,Sri Lanka
+29264,Harbhajan Singh,RHB,spin bowler,1132,869,71,Right Off Spin,7.82,40,28.3,21.72,India
+447261,Deepak Chahar,LHB,pace bowler,1132,848,95,Right Medium,8.01,40,28.3,21.2,India
+539548,Scott Kuggeleijn,LHB,pace bowler,906,647,88,Right Fast,8.4,32,28.31,20.22,New Zealand
+774219,Matthew Kuhnemann,RHB,spin bowler,708,591,41,Left Off Spin,7.19,25,28.32,23.64,Australia
+362201,Lewis Gregory,RHB,pace bowler,2839,1906,150,Right Fast,8.94,100,28.39,19.06,England
+787073,Chris Green,RHB,spin bowler,2954,2422,187,Right Off Spin,7.32,104,28.4,23.29,Australia
+51782,Fidel Edwards,RHB,pace bowler,910,653,48,Right Fast,8.36,32,28.44,20.41,West Indies
+639140,Matt Milnes,RHB,pace bowler,825,566,42,Right Fast,8.75,29,28.45,19.52,England
+11745,Steven Croft,RHB,spin bowler,712,561,66,Right Off Spin,7.61,25,28.48,22.44,England
+47850,Roelof van der Merwe,LHB,spin bowler,1054,763,120,Left Off Spin,8.29,37,28.49,20.62,Netherlands
+528067,Murugan Ashwin,RHB,spin bowler,1084,839,55,Right Wrist Spin,7.75,38,28.53,22.08,India
+475281,Shardul Thakur,RHB,pace bowler,2458,1573,116,Right Medium,9.38,86,28.58,18.29,India
+670013,Fabian Allen,RHB,spin bowler,1545,1227,95,Left Off Spin,7.56,54,28.61,22.72,West Indies
+489889,Pat Cummins,RHB,pace bowler,2206,1531,102,Right Fast,8.65,77,28.65,19.88,Australia
+272450,Mitchell Marsh,RHB,pace bowler,860,583,66,Right Medium,8.85,30,28.67,19.43,Australia
+311158,Ben Stokes,RHB,pace bowler,1496,1056,86,Right Fast,8.5,52,28.77,20.31,England
+26421,Ravichandran Ashwin,RHB,spin bowler,2705,2102,163,Right Off Spin,7.72,94,28.78,22.36,India
+959789,Hassan Khan,RHB,spin bowler,691,583,46,Left Off Spin,7.11,24,28.79,24.29,United States of America
+325026,Glenn Maxwell,RHB,spin bowler,1846,1377,191,Right Off Spin,8.04,64,28.84,21.52,Australia
+550235,Tom Curran,LHB,pace bowler,1414,905,133,Right Fast,9.37,49,28.86,18.47,England
+717373,Amad Butt,RHB,pace bowler,1156,754,54,Right Fast,9.2,40,28.9,18.85,Pakistan
+959767,Rachin Ravindra,RHB,spin bowler,867,708,51,Left Off Spin,7.35,30,28.9,23.6,New Zealand
+625371,Hardik Pandya,RHB,pace bowler,2804,1907,174,Right Fast,8.82,97,28.91,19.66,India
+227758,Imad Wasim,LHB,spin bowler,2116,1692,232,Left Off Spin,7.5,73,28.99,23.18,Pakistan
+38141,Jeetan Patel,RHB,spin bowler,2088,1756,97,Right Off Spin,7.13,72,29.0,24.39,New Zealand
+41324,Mohammad Sami,LHB,pace bowler,668,630,78,Right Fast,6.36,23,29.04,27.39,Pakistan
+1168641,Harpreet Brar,RHB,spin bowler,989,812,57,Left Off Spin,7.31,34,29.09,23.88,India
+310519,Scott Borthwick,RHB,spin bowler,993,727,56,Right Wrist Spin,8.2,34,29.21,21.38,England
+637163,Aron Nijjar,RHB,spin bowler,760,602,37,Left Off Spin,7.57,26,29.23,23.15,England
+570854,Jack Wildermuth,RHB,pace bowler,848,660,51,Right Fast,7.71,29,29.24,22.76,Australia
+215152,Jackson Bird,RHB,pace bowler,1141,903,70,Right Fast,7.58,39,29.26,23.15,Australia
+213674,Todd Astle,RHB,spin bowler,853,703,45,Right Wrist Spin,7.28,29,29.41,24.24,New Zealand
+19274,Steven Patterson,RHB,pace bowler,825,589,33,Right Fast,8.4,28,29.46,21.04,England
+42639,Shahid Afridi,LHB,spin bowler,1357,1035,128,Right Wrist Spin,7.87,46,29.5,22.5,Pakistan
+719715,Washington Sundar,LHB,spin bowler,1093,955,96,Right Off Spin,6.87,37,29.54,25.81,India
+380974,Sunzamul Islam,RHB,spin bowler,680,570,46,Left Off Spin,7.16,23,29.57,24.78,Bangladesh
+376116,Umesh Yadav,RHB,pace bowler,2218,1453,103,Right Fast,9.16,75,29.57,19.37,India
+232491,Anwar Ali,LHB,pace bowler,1066,726,93,Right Fast,8.81,36,29.61,20.17,Pakistan
+696143,Shane Snater,RHB,pace bowler,918,566,42,Right Fast,9.73,31,29.61,18.26,Netherlands
+56007,Mashrafe Mortaza,LHB,pace bowler,889,797,97,Right Fast,6.69,30,29.63,26.57,Bangladesh
+43685,Yasir Shah,RHB,spin bowler,1365,1135,73,Right Wrist Spin,7.22,46,29.67,24.67,Pakistan
+480603,Iftikhar Ahmed,LHB,spin bowler,834,663,94,Right Off Spin,7.55,28,29.79,23.68,Pakistan
+299572,Sikandar Raza,LHB,spin bowler,1341,1137,128,Right Off Spin,7.08,45,29.8,25.27,Zimbabwe
+432960,Simon Harmer,RHB,spin bowler,2385,1752,129,Right Off Spin,8.17,80,29.81,21.9,South Africa
+232491,Anwar Ali,RHB,pace bowler,2237,1465,113,Right Fast,9.16,75,29.83,19.53,Pakistan
+696401,Marco Jansen,RHB,pace bowler,1196,823,58,Left Fast,8.72,40,29.9,20.58,South Africa
+381002,Graeme van Buuren,RHB,spin bowler,689,537,43,Left Off Spin,7.7,23,29.96,23.35,England
+885181,Dan Douthwaite,RHB,pace bowler,870,558,42,Right Fast,9.35,29,30.0,19.24,England
+30288,Karn Sharma,RHB,spin bowler,1171,821,62,Right Wrist Spin,8.56,39,30.03,21.05,India
+403902,Liam Livingstone,LHB,spin bowler,841,606,88,Right Wrist Spin,8.33,28,30.04,21.64,England
+438362,Sandeep Sharma,LHB,pace bowler,1175,906,105,Right Medium,7.78,39,30.13,23.23,India
+221140,David Wiese,LHB,pace bowler,1900,1359,198,Right Fast,8.39,63,30.16,21.57,Namibia
+437506,Imran Manack,RHB,spin bowler,607,536,36,Right Off Spin,6.79,20,30.35,26.8,South Africa
+940973,Mohammed Siraj,RHB,pace bowler,1918,1335,102,Right Fast,8.62,63,30.44,21.19,India
+533042,Billy Stanlake,RHB,pace bowler,1586,1167,75,Right Fast,8.15,52,30.5,22.44,Australia
+488620,Tladi Bokako,RHB,pace bowler,732,507,37,Right Fast,8.66,24,30.5,21.12,South Africa
+348056,Kyle Mayers,RHB,pace bowler,733,598,68,Right Medium,7.35,24,30.54,24.92,West Indies
+310107,Danny Briggs,LHB,spin bowler,947,679,100,Left Off Spin,8.37,31,30.55,21.9,England
+236779,Ishant Sharma,RHB,pace bowler,1134,819,57,Right Fast,8.31,37,30.65,22.14,India
+643433,George Garton,RHB,pace bowler,1075,723,60,Left Fast,8.92,35,30.71,20.66,England
+20032,Chris Rushworth,RHB,pace bowler,769,604,44,Right Fast,7.64,25,30.76,24.16,England
+32966,Piyush Chawla,LHB,spin bowler,925,651,86,Right Wrist Spin,8.53,30,30.83,21.7,India
+677081,Keemo Paul,LHB,pace bowler,834,560,73,Right Fast,8.94,27,30.89,20.74,West Indies
+343305,Bilawal Bhatti,RHB,pace bowler,742,518,34,Right Fast,8.59,24,30.92,21.58,Pakistan
+49764,Angelo Mathews,RHB,pace bowler,811,627,56,Right Medium,7.76,26,31.19,24.12,Sri Lanka
+355092,Joe Leach,RHB,pace bowler,905,552,40,Right Fast,9.84,29,31.21,19.03,England
+230371,Ben Cutting,RHB,pace bowler,2343,1517,128,Right Fast,9.27,75,31.24,20.23,Australia
+511247,Matt Taylor,RHB,pace bowler,1125,773,50,Left Fast,8.73,36,31.25,21.47,England
+326016,Bhuvneshwar Kumar,LHB,pace bowler,1886,1479,186,Right Medium,7.65,60,31.43,24.65,India
+719715,Washington Sundar,RHB,spin bowler,1354,1038,99,Right Off Spin,7.83,43,31.49,24.14,India
+214974,Mitchell Claydon,RHB,pace bowler,1356,908,54,Right Fast,8.96,43,31.53,21.12,Australia
+17970,Daryl Mitchell,RHB,pace bowler,946,801,74,Right Medium,7.09,30,31.53,26.7,England
+458895,Andrew Salter,RHB,spin bowler,1199,848,64,Right Off Spin,8.48,38,31.55,22.32,England
+362565,Craig Meschede,RHB,pace bowler,855,618,49,Right Fast,8.3,27,31.67,22.89,Germany
+297626,Will Beer,RHB,spin bowler,1080,850,63,Right Wrist Spin,7.62,34,31.76,25.0,England
+22559,Graham Wagg,RHB,pace bowler,1282,874,60,Left Fast,8.8,40,32.05,21.85,England
+268740,Seekkuge Prasanna,RHB,spin bowler,1410,1200,91,Right Wrist Spin,7.05,44,32.05,27.27,Sri Lanka
+23513,Graeme White,RHB,spin bowler,1636,1197,83,Left Off Spin,8.2,51,32.08,23.47,England
+471342,Krunal Pandya,LHB,spin bowler,933,643,106,Left Off Spin,8.71,29,32.17,22.17,India
+20367,Darren Stevens,RHB,pace bowler,968,679,54,Right Medium,8.55,30,32.27,22.63,England
+552152,Dushmantha Chameera,LHB,pace bowler,936,664,76,Right Fast,8.46,29,32.28,22.9,Sri Lanka
+537119,Mohit Sharma,LHB,pace bowler,1002,634,76,Right Medium,9.48,31,32.32,20.45,India
+308408,Josh Cobb,RHB,spin bowler,911,641,75,Right Off Spin,8.53,28,32.54,22.89,England
+471342,Krunal Pandya,RHB,spin bowler,2478,2114,145,Left Off Spin,7.03,76,32.61,27.82,India
+370040,Jeffrey Vandersay,RHB,spin bowler,621,503,29,Right Wrist Spin,7.41,19,32.68,26.47,Sri Lanka
+627627,Tom Rogers,RHB,pace bowler,850,567,41,Right Fast,8.99,26,32.69,21.81,Australia
+785323,Nathan McAndrew,RHB,pace bowler,1145,772,58,Right Fast,8.9,35,32.71,22.06,Australia
+245490,Ahmed Raza,RHB,spin bowler,917,842,51,Left Off Spin,6.53,28,32.75,30.07,United Arab Emirates
+21646,James Tredwell,RHB,spin bowler,657,508,31,Right Off Spin,7.76,20,32.85,25.4,England
+436677,Soumya Sarkar,RHB,pace bowler,854,559,64,Right Fast,9.17,26,32.85,21.5,Bangladesh
+458897,Ruaidhri Smith,RHB,pace bowler,856,583,39,Right Medium,8.81,26,32.92,22.42,Scotland
+274921,Veerasammy Permaul,RHB,spin bowler,725,711,46,Left Off Spin,6.12,22,32.95,32.32,West Indies
+629063,Mehidy Hasan Miraz,RHB,spin bowler,1187,841,94,Right Off Spin,8.47,36,32.97,23.36,Bangladesh
+481875,George Linde,RHB,spin bowler,2481,1983,128,Left Off Spin,7.51,75,33.08,26.44,South Africa
+526021,Cole McConchie,RHB,spin bowler,828,662,67,Right Off Spin,7.5,25,33.12,26.48,New Zealand
+571151,James Weighell,RHB,pace bowler,805,516,42,Right Medium,9.36,24,33.54,21.5,England
+553800,Chris Tremain,RHB,pace bowler,808,565,38,Right Fast,8.58,24,33.67,23.54,Australia
+623695,Chamika Karunaratne,RHB,pace bowler,949,664,54,Right Fast,8.58,28,33.89,23.71,Sri Lanka
+303427,Paul Stirling,RHB,spin bowler,718,518,73,Right Off Spin,8.32,21,34.19,24.67,Ireland
+547758,Ed Nuttall,RHB,pace bowler,1006,669,51,Left Fast,9.02,29,34.69,23.07,New Zealand
+297583,Kyle Abbott,LHB,pace bowler,798,575,74,Right Fast,8.33,23,34.7,25.0,South Africa
+410316,Alex Hughes,RHB,pace bowler,1428,1061,75,Right Medium,8.08,41,34.83,25.88,England
+594322,Corbin Bosch,RHB,pace bowler,812,549,43,Right Fast,8.87,23,35.3,23.87,South Africa
+308798,D'Arcy Short,RHB,spin bowler,1483,1025,92,Left Wrist Spin,8.68,42,35.31,24.4,Australia
+297630,Matt Coles,RHB,pace bowler,1103,731,47,Right Fast,9.05,31,35.58,23.58,England
+390481,Harshal Patel,LHB,pace bowler,1537,960,101,Right Medium,9.61,43,35.74,22.33,India
+1182529,Noor Ahmad,RHB,spin bowler,1216,958,64,Left Wrist Spin,7.62,34,35.76,28.18,Afghanistan
+42657,Shoaib Malik,RHB,spin bowler,1078,883,134,Right Off Spin,7.33,30,35.93,29.43,Pakistan
+230559,Kieron Pollard,LHB,pace bowler,1403,918,143,Right Medium,9.17,39,35.97,23.54,West Indies
+423838,Rahul Tewatia,RHB,spin bowler,793,597,56,Right Wrist Spin,7.97,22,36.05,27.14,India
+700167,Navdeep Saini,RHB,pace bowler,977,739,51,Right Fast,7.93,27,36.19,27.37,India
+578769,Ed Barnard,RHB,pace bowler,1655,1139,97,Right Fast,8.72,45,36.78,25.31,England
+288285,Clive Rose,RHB,spin bowler,810,601,48,Left Off Spin,8.09,22,36.82,27.32,Australia
+379774,Colin Ackermann,LHB,spin bowler,702,539,76,Right Off Spin,7.81,19,36.95,28.37,Netherlands
+550133,Mosaddek Hossain,RHB,spin bowler,672,513,72,Right Off Spin,7.86,18,37.33,28.5,Bangladesh
+1159711,Shahbaz Ahmed,RHB,spin bowler,758,510,49,Left Off Spin,8.92,20,37.9,25.5,India
+1233042,Amar Sharma,RHB,spin bowler,698,526,29,Right Off Spin,7.96,18,38.78,29.22,Malta
+554691,Axar Patel,LHB,spin bowler,1475,990,139,Left Off Spin,8.94,38,38.82,26.05,India
+574178,Akila Dananjaya,RHB,spin bowler,1155,786,52,Mixed,8.82,28,41.25,28.07,Sri Lanka
+234675,Ravindra Jadeja,LHB,spin bowler,1588,1091,143,Left Off Spin,8.73,38,41.79,28.71,India
+10772,Paul Collingwood,RHB,pace bowler,719,592,42,Right Medium,7.29,17,42.29,34.82,England
+44149,Johan Botha,RHB,spin bowler,848,678,61,Right Off Spin,7.5,20,42.4,33.9,South Africa
+55395,Colin de Grandhomme,RHB,pace bowler,1457,952,92,Right Fast,9.18,34,42.85,28.0,New Zealand
+596417,Brydon Carse,RHB,pace bowler,1143,768,58,Right Fast,8.93,25,45.72,30.72,England

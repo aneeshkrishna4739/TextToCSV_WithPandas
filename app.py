@@ -50,8 +50,8 @@ Instructions for Analysis:
 - Ensure that the code correctly handles the dataset's structure and column types.
 
 Metadata: There are 4 dataframes df1,df2,df3,df4 which extracted data from files in below codes:
-                df1=pd.read_excel("batters_against_bowlingtype.xlsx")
-                df2=pd.read_excel("Bowling_against_left_right_handers.xlsx")
+                df1=pd.read_excel("batters_against_bowlingtype.csv")
+                df2=pd.read_excel("Bowling_against_left_right_handers.csv")
                 df3=pd.read_csv("batting_stats.csv")
                 df4=pd.read_csv("bowling_stats.csv")
               
@@ -122,18 +122,9 @@ Column Details in each dataframes:
                 bowling_strike_rate    float64
                 Country                 object
                
-    Columns 'bowling_style' has values :'LFM', 'SLA', 'RM', 'LWS', 'OB', 'RWS', 'RF', 'RFM', 'LF', 'LM', 'LSM'.
-                'LFM' stands for Left Arm Medium Fast
-                'SLA' stands for Left Arm OffSpinner
-                'RM'  stands for Right Arm Medium
-                'LWS' stands for Left Arm WristSpinner, 
-                'OB'  stands for Right Arm OffSpinner
-                'RWS' stands for Right Arm WristSpinner
-                'RF'  stands for Right Arm Fast
-                'RFM' stands for Left Arm Medium Fast
-                'LF'  stands for Left Arm Fast
-                'LM'  stands for Left Arm Medium
-                'LSM' stands for Left Arm Slow Medium
+    Columns 'bowling_style' has values :'Left Off Spin', 'Right Medium', 'Right Fast', 'Left Medium',
+       'Right Wrist Spin', 'Left Fast', 'Right Off Spin',
+       'Left Wrist Spin', 'Mixed'.
     Columns 'bat_hand' has values :'RHB', 'LHB'.
                 'RHB' stands for Right Hand Batsman
                 'LHB' stands for Left Hand Batsman
@@ -142,10 +133,10 @@ Column Details in each dataframes:
                 'LHB' stands for Left Hand Batsman
     Columns 'bowl_kind' has values :'spin bowler', 'pace bowler'.
 
-- Prompt 1: "top 5 batting average against Offspinners among batsmen who played more than 50 matches."
+- Prompt 1: "top 5 batting average against right arm Offspinners among batsmen who played more than 50 matches."
 
     Generated Code:
-    result=df1[(df1['matches_played']>50) & (df1['bowling_style']=='OB')].sort_values(by='batting_average',ascending=False).head(5)
+    result=df1[(df1['matches_played']>50) & (df1['bowling_style']=='Right Off Spin')].sort_values(by='batting_average',ascending=False).head(5)
 
 - Prompt 2: "5 Lowest economy among bowlers against Right handed batsmen who played more than 75 matches"
 
@@ -160,7 +151,7 @@ Column Details in each dataframes:
 - Prompt 4: "5 right arm fast Bowlers with lowest bowling average who bowled more than 2000 balls"
 
     Generated Code:
-    result=df4[(df4['ball_bowled']>2000) & (df4['bowling_style']=='RF')].sort_values(by='bowling_average',ascending=True).head(5)    
+    result=df4[(df4['ball_bowled']>2000) & (df4['bowling_style']=='Right Fast')].sort_values(by='bowling_average',ascending=True).head(5)    
 
 - Prompt 5: "bar plot 5 pace bowlers bowled 1000+ balls  with lowest bowling average"
 
@@ -238,8 +229,8 @@ st.set_page_config(page_title="Cricket Statistics LLM Chatbot")
 
 @st.cache_data
 def load_data():
-    df1 = pd.read_excel("data/batters_against_bowlingtype.xlsx")
-    df2 = pd.read_excel("data/Bowling_against_left_right_handers.xlsx")
+    df1 = pd.read_csv("data/batters_against_bowlingtype.csv")
+    df2 = pd.read_csv("data/Bowling_against_left_right_handers.csv")
     df3 = pd.read_csv("data/batting_stats.csv")
     df4 = pd.read_csv("data/bowling_stats.csv")
     return df1, df2, df3, df4

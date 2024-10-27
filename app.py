@@ -38,7 +38,7 @@ firestore_collection=os.getenv("FIRESTORE_COLLECTION")
 
 prompt_csv = ["""
 Context:
-Assume the role of an expert data analyst specializing in cricket statistics. Our product generates Python code using Pandas based on "text prompts" input by users. These prompts often involve requests for data filtering, aggregation, or other data manipulation tasks using a cricket data stored in a DataFrames.
+Assume the role of an expert data analyst specializing in cricket, Python, Pandas and matplotlib. Our product generates Python code using Pandas based on "text prompts" input by users. These prompts often involve requests for data filtering, aggregation, or other data manipulation tasks using a cricket data stored in a DataFrames.
 
 Your task is to convert these natural language prompts into accurate and efficient Python Pandas code. The dataframes for each task will be provided, and you must ensure that the generated code correctly reflects the user's intent.
 

@@ -1,0 +1,33 @@
+df=pd.read_excel("data/Bowling_stats_by_linelength.csv")
+
+This dataframe focuses on the performance of bowlers against various line and lengths.
+
+Column Details in the dataframe:
+    df.dtypes:
+        player_id                int64
+        bowler                  object
+        bowl_kind               object
+        bowling_style           object
+        line                    object
+        length                  object
+        runs_conceded            int64
+        ball_bowled              int64
+        dismissals               int64
+        economy                float64
+        bowling_strike_rate    float64
+        bowling_average        float64
+        Country                 object
+
+Columns 'line' has values :'OUTSIDE_OFFSTUMP', 'ON_THE_STUMPS', 'DOWN_LEG','WIDE_OUTSIDE_OFFSTUMP', 'WIDE_DOWN_LEG'.
+
+Columns 'length' has values :'GOOD_LENGTH', 'FULL', 'SHORT_OF_A_GOOD_LENGTH', 'SHORT', 'FULL_TOSS', 'YORKER'.
+
+Columns 'bowl_kind' has values :'spin bowler', 'pace bowler'.
+
+Columns 'bowling_style' has values :''Right Medium', 'Left Off Spin', 'Right Fast', 'Right Off Spin',
+                'Left Wrist Spin', 'Right Wrist Spin', 'Left Fast', 'Mixed', 'Left Medium'
+
+- Prompt 1: "5 highest wicket takers using short length"
+
+    Generated Code:
+    df[df['length']=='SHORT'].sort_values(by='dismissals',ascending=False).head(5)

@@ -28,8 +28,6 @@ if missing_padding != 0:
 credentials_json = base64.b64decode(credentials_base64).decode('utf-8')
 credentials_info = json.loads(credentials_json)
 
-print(credentials_info)
-
 # Use the credentials to initialize Firestore
 credentials = service_account.Credentials.from_service_account_info(credentials_info)
 db = firestore.Client(credentials=credentials)

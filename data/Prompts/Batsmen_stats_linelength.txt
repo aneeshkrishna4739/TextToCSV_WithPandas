@@ -1,0 +1,30 @@
+df=pd.read_excel("data/Batsmen_stats_linelength.csv")
+
+This dataframe captures the performance of batsmen against various types of bowling styles.
+
+Column Details in the dataframe:
+    df.dtypes:                
+        player_id                int64
+        batsman                 object
+        bat_hand                object
+        line                    object
+        length                  object
+        runs_scored              int64
+        balls_faced              int64
+        dismissals               int64
+        batting_average        float64
+        batting_strike_rate    float64
+        Country                 object
+
+Columns 'bat_hand' has values :'RHB', 'LHB'.
+                'RHB' stands for Right Hand Batsman
+                'LHB' stands for Left Hand Batsman
+
+Columns 'line' has values :'OUTSIDE_OFFSTUMP', 'ON_THE_STUMPS', 'DOWN_LEG','WIDE_OUTSIDE_OFFSTUMP', 'WIDE_DOWN_LEG'.
+
+Columns 'length' has values :'GOOD_LENGTH', 'FULL', 'SHORT_OF_A_GOOD_LENGTH', 'SHORT', 'FULL_TOSS', 'YORKER'.
+
+- Prompt 1: "top 5 highest runs scored against short length balls"
+
+    Generated Code:
+    result=df[df['length']=='SHORT'].sort_values(by='runs_scored',ascending=False).head(5)

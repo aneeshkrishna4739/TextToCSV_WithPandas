@@ -1,0 +1,32 @@
+df=pd.read_csv("batting_stats.csv")
+
+This dataframe provides an in-depth overview of a batsman's performance across various matches.
+
+Column Details in the dataframe:
+    df.dtypes:
+                player_id                int64
+                batsman                 object
+                bat_hand                object
+                matches_played           int64
+                runs_scored              int64
+                balls_faced              int64
+                batting_strike_rate    float64
+                dismissals               int64
+                boundary_runs            int64
+                boundary_balls           int64
+                4s                       int64
+                6s                       int64
+                dots                     int64
+                dot_percent            float64
+                boundary_percent       float64
+                batting_average        float64
+                Country                 object
+
+Columns 'bat_hand' has values :'RHB', 'LHB'.
+                'RHB' stands for Right Hand Batsman
+                'LHB' stands for Left Hand Batsman
+
+- Prompt 3: "bar plot of Top 10 batting strike rate who faced more than 1000 balls"
+
+    Generated Code:
+    result=df[(df['balls_faced']>1000)].sort_values(by='batting_strike_rate',ascending=False).head(10).plot(kind='bar',x='batsman',y='batting_strike_rate')

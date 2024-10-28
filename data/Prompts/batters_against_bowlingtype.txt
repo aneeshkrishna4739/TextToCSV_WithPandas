@@ -1,0 +1,32 @@
+df=pd.read_excel("data/batters_against_bowlingtype.csv")
+
+This dataframe captures the performance of batsmen against various types of bowling styles.
+
+Column Details in the dataframe:
+    df.dtypes:                
+        player_id                int64
+        batsman                 object
+        bat_hand                object
+        bowling_style           object
+        bowl_kind               object
+        matches_played           int64
+        runs_scored              int64
+        balls_faced              int64
+        batting_strike_rate    float64
+        dismissals               int64
+        batting_average        float64
+        Country                 object
+
+Columns 'bat_hand' has values :'RHB', 'LHB'.
+                'RHB' stands for Right Hand Batsman
+                'LHB' stands for Left Hand Batsman
+
+Columns 'bowl_kind' has values :'spin bowler', 'pace bowler'.
+
+Columns 'bowling_style' has values :''Right Medium', 'Left Off Spin', 'Right Fast', 'Right Off Spin',
+                'Left Wrist Spin', 'Right Wrist Spin', 'Left Fast', 'Mixed', 'Left Medium'
+
+- Prompt 1: "top 5 batting average against right arm Offspinners among batsmen who played more than 50 matches."
+
+    Generated Code:
+    result=df[(df['matches_played']>50) & (df['bowling_style']=='Right Off Spin')].sort_values(by='batting_average',ascending=False).head(5)

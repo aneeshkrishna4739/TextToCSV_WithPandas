@@ -1,0 +1,34 @@
+df=pd.read_excel("Batsmen_stats_by_shots.csv")
+
+This dataframe captures the Statistics of batsmen across various shots.
+
+Column Details in the dataframe:
+    df.dtypes:
+        player_id                int64
+        batsman                 object
+        bat_hand                object
+        shot                    object
+        runs_scored              int64
+        balls_faced              int64
+        dismissals               int64
+        batting_average        float64
+        batting_strike_rate    float64
+        Country                 object
+
+Columns 'bat_hand' has values :'RHB', 'LHB'.
+                'RHB' stands for Right Hand Batsman
+                'LHB' stands for Left Hand Batsman
+
+Columns 'shot' has values :'FLICK', 'ON_DRIVE', 'VERTICAL_FORWARD_ATTACK', 'COVER_DRIVE',
+       'PULL', 'SLOG_SHOT', 'CUT_SHOT', 'PULL_HOOK_ON_BACK_FOOT',
+       'CUT_SHOT_ON_BACK_FOOT', 'SWEEP', 'STRAIGHT_DRIVE', 'STEERED',
+       'LEG_GLANCE', 'REVERSE_SWEEP', 'SWEEP_SHOT', 'SLOG_SWEEP',
+       'SQUARE_DRIVE', 'PUSH_SHOT', 'PUSH', 'DEFENDED', 'RAMP', 'DAB',
+       'UPPER_CUT', 'HOOK', 'REVERSE_PULL', 'LEFT_ALONE', 'DROP_AND_RUN',
+       'PADDLE_SWEEP', 'FORWARD_DEFENCE', 'BACK_DEFENCE', 'REVERSE_SCOOP',
+       'LATE_CUT', 'NO_SHOT', 'PADDLE_AWAY'
+
+- Prompt 1: "top 5 batting average through Flick"
+
+    Generated Code:
+    result=df[df['shot']=='FLICK'].sort_values(by='batting_average',ascending=False).head(5)

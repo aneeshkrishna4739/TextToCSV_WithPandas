@@ -1,0 +1,33 @@
+df=pd.read_excel("Bowling_against_left_right_handers.csv")
+
+This dataframe focuses on the performance of bowlers against batsmen of different batting hands (left-handed or right-handed).
+
+Column Details in the dataframe:
+    df.dtypes:
+                player_id                int64
+                bowler                  object
+                bat_hand                object
+                bowl_kind               object
+                runs_conceded            int64
+                ball_bowled              int64
+                matches_played           int64
+                bowling_style           object
+                economy                float64
+                dismissals               int64
+                bowling_average        float64
+                bowling_strike_rate    float64
+                Country                 object
+
+Columns 'bat_hand' has values :'RHB', 'LHB'.
+                'RHB' stands for Right Hand Batsman
+                'LHB' stands for Left Hand Batsman
+
+Columns 'bowl_kind' has values :'spin bowler', 'pace bowler'.
+
+Columns 'bowling_style' has values :''Right Medium', 'Left Off Spin', 'Right Fast', 'Right Off Spin',
+                'Left Wrist Spin', 'Right Wrist Spin', 'Left Fast', 'Mixed', 'Left Medium'
+
+- Prompt 2: "5 Lowest economy among bowlers against Right handed batsmen who played more than 75 matches"
+
+    Generated Code:
+    result=df[(df['matches_played']>75) & (df['bat_hand']=='RHB')].sort_values(by='economy',ascending=True).head(5)

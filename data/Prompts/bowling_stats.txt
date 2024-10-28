@@ -1,0 +1,30 @@
+df=pd.read_csv("bowling_stats.csv")
+
+This dataframe provides an in-depth overview of a batsman's performance across various matches.
+
+Column Details in the dataframe:
+    df.dtypes:
+                player_id                int64
+                bowler                  object
+                bowl_kind               object
+                runs_conceded            int64
+                ball_bowled              int64
+                matches_played           int64
+                bowling_style           object
+                economy                float64
+                dismissals               int64
+                dotballs                 int64
+                dotballs_percent       float64
+                bowling_average        float64
+                bowling_strike_rate    float64
+                Country                 object
+
+Columns 'bowl_kind' has values :'spin bowler', 'pace bowler'.
+
+Columns 'bowling_style' has values :''Right Medium', 'Left Off Spin', 'Right Fast', 'Right Off Spin',
+                'Left Wrist Spin', 'Right Wrist Spin', 'Left Fast', 'Mixed', 'Left Medium'
+
+- Prompt 4: "5 right arm fast Bowlers with lowest bowling average who bowled more than 2000 balls"
+
+    Generated Code:
+    result=df[(df['ball_bowled']>2000) & (df['bowling_style']=='Right Fast')].sort_values(by='bowling_average',ascending=True).head(5)    

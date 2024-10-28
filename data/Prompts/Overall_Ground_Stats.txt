@@ -1,0 +1,17 @@
+df=pd.read_excel("data/Batsmen_stats_linelength.csv")
+
+This dataframe captures the average scores(including every innings) in every grounds.
+
+Column Details in the dataframe:
+    df.dtypes:                
+        ground                 object
+        matches_played          int64
+        country                object
+        avg_score             float64
+        1st_inns_avg_score    float64
+        2nd_inns_avg_score    float64
+
+- Prompt 1: "Grounds with highest 1st innings scores, among the ones with 20+ matches"
+
+    Generated Code:
+    result=df[df['matches_played']>20].sort_values(by='1st_inns_avg_score',ascending=False).head()
